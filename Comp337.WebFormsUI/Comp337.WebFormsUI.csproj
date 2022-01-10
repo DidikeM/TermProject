@@ -78,18 +78,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Comp337DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Course.cs">
+    <Compile Include="Forms\FrmCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\.Designer.cs">
-      <DependentUpon>Course.cs</DependentUpon>
+    <Compile Include="Forms\FrmCourse.Designer.cs">
+      <DependentUpon>FrmCourse.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\HomePage.cs">
+    <Compile Include="Forms\FrmCoordinatorMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\HomePage.Designer.cs">
-      <DependentUpon>HomePage.cs</DependentUpon>
+    <Compile Include="Forms\FrmCoordinatorMain.Designer.cs">
+      <DependentUpon>FrmCoordinatorMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\XtraForm1.cs">
       <SubType>Form</SubType>
@@ -99,11 +99,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Course.resx">
-      <DependentUpon>Course.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmCourse.resx">
+      <DependentUpon>FrmCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\HomePage.resx">
-      <DependentUpon>HomePage.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmCoordinatorMain.resx">
+      <DependentUpon>FrmCoordinatorMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\XtraForm1.resx">
       <DependentUpon>XtraForm1.cs</DependentUpon>

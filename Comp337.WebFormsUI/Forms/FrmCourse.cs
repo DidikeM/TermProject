@@ -7,9 +7,9 @@ using Comp337.Entities.Concrete;
 
 namespace Comp337.WebFormsUI.Forms
 {
-    public partial class BaseForm : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class FrmCourse : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public BaseForm()
+        public FrmCourse()
         {
             InitializeComponent();
             _courseService = InstanceFactory.GetInstance<ICourseService>();
@@ -17,9 +17,8 @@ namespace Comp337.WebFormsUI.Forms
 
 
         private ICourseService _courseService;
-        private void BaseForm_Load(object sender, EventArgs e)
+        private void FrmCourse_Load(object sender, EventArgs e)
         {
-            
             LoadCourses();
             LoadSection();
         }
@@ -42,14 +41,12 @@ namespace Comp337.WebFormsUI.Forms
                 "Bilgilendirme", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             try
             {
-
                 _courseService.Add(new Course
                 {
                     CourseName = txtCourseName.Text,
                     CourseCredit = Convert.ToInt16(txtCourseCredit.Text),
                     SectionId = Convert.ToInt32(txtSectionId.EditValue),
                     DeleteFlag = false
-
                 });
             }
             catch (Exception e)
@@ -59,5 +56,9 @@ namespace Comp337.WebFormsUI.Forms
             }
         }
 
+        private void ribbonControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

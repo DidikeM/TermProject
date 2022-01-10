@@ -1,7 +1,7 @@
 ﻿
 namespace Comp337.WebFormsUI.Forms
 {
-    partial class HomePage
+    partial class FrmCoordinatorMain
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace Comp337.WebFormsUI.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnHomePage = new DevExpress.XtraBars.BarButtonItem();
             this.btnCourses = new DevExpress.XtraBars.BarButtonItem();
@@ -42,7 +43,9 @@ namespace Comp337.WebFormsUI.Forms
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -69,7 +72,7 @@ namespace Comp337.WebFormsUI.Forms
             this.ribbonPage1});
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
-            this.ribbon.Size = new System.Drawing.Size(949, 132);
+            this.ribbon.Size = new System.Drawing.Size(949, 158);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // btnHomePage
@@ -87,6 +90,7 @@ namespace Comp337.WebFormsUI.Forms
             this.btnCourses.ImageOptions.Image = global::Comp337.WebFormsUI.Properties.Resources.content_16x16;
             this.btnCourses.ImageOptions.LargeImage = global::Comp337.WebFormsUI.Properties.Resources.content_32x32;
             this.btnCourses.Name = "btnCourses";
+            this.btnCourses.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCourses_ItemClick);
             // 
             // btnInstructors
             // 
@@ -167,18 +171,24 @@ namespace Comp337.WebFormsUI.Forms
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(949, 24);
             // 
-            // HomePage
+            // xtraTabbedMdiManager1
+            // 
+            this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // FrmCoordinatorMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 570);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
-            this.Name = "HomePage";
+            this.IsMdiContainer = true;
+            this.Name = "FrmCoordinatorMain";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "HomePage";
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,5 +209,6 @@ namespace Comp337.WebFormsUI.Forms
         private DevExpress.XtraBars.BarButtonItem btnAssignmentOfAdvisor;
         private DevExpress.XtraBars.BarButtonItem btnUserInformation;
         private DevExpress.XtraBars.BarButtonItem btnSettings;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
     }
 }

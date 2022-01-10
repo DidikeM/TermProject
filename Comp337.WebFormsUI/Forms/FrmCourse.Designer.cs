@@ -1,7 +1,8 @@
 ﻿
 namespace Comp337.WebFormsUI.Forms
 {
-    partial class BaseForm
+    partial class FrmCourse
+
     {
         /// <summary>
         /// Required designer variable.
@@ -51,6 +52,8 @@ namespace Comp337.WebFormsUI.Forms
             this.colSectionId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDeleteFlag = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtSectionId = new DevExpress.XtraEditors.LookUpEdit();
+            this.sectionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comp337DataSet1 = new Comp337.WebFormsUI.Comp337DataSet1();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.txtCourseNamel = new DevExpress.XtraLayout.LayoutControlItem();
@@ -58,8 +61,6 @@ namespace Comp337.WebFormsUI.Forms
             this.txtSectionIdl = new DevExpress.XtraLayout.LayoutControlItem();
             this.coursesTableAdapter = new Comp337.WebFormsUI.Comp337DataSetTableAdapters.CoursesTableAdapter();
             this.comp337DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.comp337DataSet1 = new Comp337.WebFormsUI.Comp337DataSet1();
-            this.sectionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sectionsTableAdapter = new Comp337.WebFormsUI.Comp337DataSet1TableAdapters.SectionsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabloBaseForm)).BeginInit();
@@ -71,14 +72,14 @@ namespace Comp337.WebFormsUI.Forms
             ((System.ComponentModel.ISupportInitialize)(this.comp337DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grwCourse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSectionId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comp337DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCourseNamel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCourseCreditl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSectionIdl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comp337DataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comp337DataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sectionsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -97,6 +98,7 @@ namespace Comp337.WebFormsUI.Forms
             this.ribbonPage1});
             this.ribbonControl1.Size = new System.Drawing.Size(990, 158);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
+            this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
             // 
             // barButtonItem1
             // 
@@ -260,6 +262,16 @@ namespace Comp337.WebFormsUI.Forms
             this.txtSectionId.StyleController = this.tabloBaseForm;
             this.txtSectionId.TabIndex = 7;
             // 
+            // sectionsBindingSource
+            // 
+            this.sectionsBindingSource.DataMember = "Sections";
+            this.sectionsBindingSource.DataSource = this.comp337DataSet1;
+            // 
+            // comp337DataSet1
+            // 
+            this.comp337DataSet1.DataSetName = "Comp337DataSet1";
+            this.comp337DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -318,21 +330,11 @@ namespace Comp337.WebFormsUI.Forms
             this.comp337DataSetBindingSource.DataSource = this.comp337DataSet;
             this.comp337DataSetBindingSource.Position = 0;
             // 
-            // comp337DataSet1
-            // 
-            this.comp337DataSet1.DataSetName = "Comp337DataSet1";
-            this.comp337DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sectionsBindingSource
-            // 
-            this.sectionsBindingSource.DataMember = "Sections";
-            this.sectionsBindingSource.DataSource = this.comp337DataSet1;
-            // 
             // sectionsTableAdapter
             // 
             this.sectionsTableAdapter.ClearBeforeFill = true;
             // 
-            // BaseForm
+            // FrmCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -340,10 +342,10 @@ namespace Comp337.WebFormsUI.Forms
             this.Controls.Add(this.tabloBaseForm);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
-            this.Name = "BaseForm";
+            this.Name = "FrmCourse";
             this.Ribbon = this.ribbonControl1;
             this.StatusBar = this.ribbonStatusBar1;
-            this.Load += new System.EventHandler(this.BaseForm_Load);
+            this.Load += new System.EventHandler(this.FrmCourse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabloBaseForm)).EndInit();
             this.tabloBaseForm.ResumeLayout(false);
@@ -354,14 +356,14 @@ namespace Comp337.WebFormsUI.Forms
             ((System.ComponentModel.ISupportInitialize)(this.comp337DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grwCourse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSectionId.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comp337DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCourseNamel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCourseCreditl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSectionIdl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comp337DataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comp337DataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sectionsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
