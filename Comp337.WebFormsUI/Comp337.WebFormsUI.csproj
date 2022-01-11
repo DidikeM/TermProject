@@ -115,6 +115,18 @@
     <Compile Include="Forms\FrmCoordinatorMain.Designer.cs">
       <DependentUpon>FrmCoordinatorMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InstructorsForms\FrmInstructorMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InstructorsForms\FrmInstructorMain.Designer.cs">
+      <DependentUpon>FrmInstructorMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StudentsForms\FrmStudentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentsForms\FrmStudentsForm.Designer.cs">
+      <DependentUpon>FrmStudentsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\XtraForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +152,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCoordinatorMain.resx">
       <DependentUpon>FrmCoordinatorMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InstructorsForms\FrmInstructorMain.resx">
+      <DependentUpon>FrmInstructorMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StudentsForms\FrmStudentsForm.resx">
+      <DependentUpon>FrmStudentsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\XtraForm1.resx">
       <DependentUpon>XtraForm1.cs</DependentUpon>
@@ -288,6 +306,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\addfile_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32x323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about_16x161.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
