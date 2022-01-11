@@ -50,11 +50,7 @@ namespace Comp337.DataAccess.Concrete.EntityFramework
                 context.SaveChanges();
             }
         }
-
         
-
-       
-
         public void Update(TEntity entity)
         {
             using (TContext context = new TContext())

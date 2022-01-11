@@ -44,14 +44,13 @@
   <ItemGroup>
     <Compile Include="Abstract\IEntity.cs" />
     <Compile Include="Concrete\Advisor.cs" />
-    <Compile Include="Concrete\Classroom.cs" />
     <Compile Include="Concrete\Course.cs" />
     <Compile Include="Concrete\CourseInstructor.cs" />
+    <Compile Include="Concrete\CourseRegistration.cs" />
     <Compile Include="Concrete\Department.cs" />
     <Compile Include="Concrete\Instructor.cs" />
-    <Compile Include="Concrete\Section.cs" />
+    <Compile Include="Concrete\Semester.cs" />
     <Compile Include="Concrete\Student.cs" />
-    <Compile Include="Concrete\TimeSlot.cs" />
     <Compile Include="Concrete\User.cs" />
     <Compile Include="Concrete\UserAuthorization.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

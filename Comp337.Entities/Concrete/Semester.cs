@@ -2,10 +2,9 @@
 
 namespace Comp337.Entities.Concrete
 {
-    public class Department : IEntity
+    public class Semester : IEntity
     {
         public int Id { get; set; }
-        public string DepartmentName { get; set; }
-
+        public string Name { get; set; }
     }
 }

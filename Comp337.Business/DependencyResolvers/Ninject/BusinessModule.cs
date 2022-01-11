@@ -13,8 +13,8 @@ namespace Comp337.Business.DependencyResolvers.Ninject
             Bind<IAdvisorService>().To<AdvisorManager>().InSingletonScope();
             Bind<IAdvisorDal>().To<EfAdvisorDal>().InSingletonScope();
 
-            Bind<IClassroomService>().To<ClassroomManager>().InSingletonScope();
-            Bind<IClassroomDal>().To<EfClassroomDal>().InSingletonScope();
+            Bind<ICourseRegistrationService>().To<CourseRegistrationManager>().InSingletonScope();
+            Bind<ICourseRegistrationDal>().To<EfCourseRegistrationDal>().InSingletonScope();
 
             Bind<ICourseService>().To<CourseManager>().InSingletonScope();
             Bind<ICourseDal>().To<EfCourseDal>().InSingletonScope();
@@ -28,14 +28,11 @@ namespace Comp337.Business.DependencyResolvers.Ninject
             Bind<IInstructorService>().To<InstructorManager>().InSingletonScope();
             Bind<IInstructorDal>().To<EfInstructorDal>().InSingletonScope();
 
-            Bind<ISectionService>().To<SectionManager>().InSingletonScope();
-            Bind<ISectionDal>().To<EfSectionDal>().InSingletonScope();
+            Bind<ISemesterService>().To<SemesterManager>().InSingletonScope();
+            Bind<ISemesterDal>().To<EfSemesterDal>().InSingletonScope();
 
             Bind<IStudentService>().To<StudentManager>().InSingletonScope();
             Bind<IStudentDal>().To<EfStudentDal>().InSingletonScope();
-
-            Bind<ITimeSlotService>().To<TimeSlotManager>().InSingletonScope();
-            Bind<ITimeSlotDal>().To<EfTimeSlotDal>().InSingletonScope();
 
             Bind<IUserAuthorizationService>().To<UserAuthorizationManager>().InSingletonScope();
             Bind<IUserAuthorizationDal>().To<EfUserAuthorizationDal>();

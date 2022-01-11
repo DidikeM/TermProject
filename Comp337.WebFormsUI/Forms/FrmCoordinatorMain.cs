@@ -24,15 +24,15 @@ namespace Comp337.WebFormsUI.Forms
             form.ShowDialog();
         }
 
-        FrmCourse frmCourse;
+        private FrmCoordinatorCourse frmCoordinatorCourse;
 
         private void btnCourses_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (frmCourse == null)
+            if (frmCoordinatorCourse == null)
             {
-                frmCourse = new FrmCourse();
-                frmCourse.MdiParent = this;
-                frmCourse.Show();
+                frmCoordinatorCourse = new FrmCoordinatorCourse();
+                frmCoordinatorCourse.MdiParent = this;
+                frmCoordinatorCourse.Show();
             }
         }
     }

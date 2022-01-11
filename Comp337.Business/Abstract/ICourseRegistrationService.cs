@@ -1,6 +1,6 @@
 ﻿namespace Comp337.Business.Abstract
 {
-    public interface IClassroomService
+    public interface ICourseRegistrationService
     {
         
     }

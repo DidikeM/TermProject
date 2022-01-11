@@ -52,28 +52,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IAdvisorDal.cs" />
-    <Compile Include="Abstract\IClassroomDal.cs" />
     <Compile Include="Abstract\ICourseDal.cs" />
+    <Compile Include="Abstract\ICourseRegistrationDal.cs" />
     <Compile Include="Abstract\ICourseInstructorDal.cs" />
     <Compile Include="Abstract\IDepartmentDal.cs" />
     <Compile Include="Abstract\IEntityRepository.cs" />
     <Compile Include="Abstract\IInstructorDal.cs" />
-    <Compile Include="Abstract\ISectionDal.cs" />
+    <Compile Include="Abstract\ISemesterDal.cs" />
     <Compile Include="Abstract\IStudentDal.cs" />
-    <Compile Include="Abstract\ITimeSlotDal.cs" />
     <Compile Include="Abstract\IUserAuthorizationDal.cs" />
     <Compile Include="Abstract\IUserDal.cs" />
     <Compile Include="Concrete\EntityFramework\Comp337Context.cs" />
     <Compile Include="Concrete\EntityFramework\EfAdvisorDal.cs" />
-    <Compile Include="Concrete\EntityFramework\EfClassroomDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfCourseDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfCourseRegistrationDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfCourseInstructorDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfDepartmentDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfEntityRepositoryBase.cs" />
     <Compile Include="Concrete\EntityFramework\EfInstructorDal.cs" />
-    <Compile Include="Concrete\EntityFramework\EfSectionDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfSemesterDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfStudentDal.cs" />
-    <Compile Include="Concrete\EntityFramework\EfTimeSlotDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfUserAuthorizationDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfUserDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

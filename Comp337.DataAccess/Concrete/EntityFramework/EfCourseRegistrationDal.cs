@@ -3,7 +3,7 @@ using Comp337.Entities.Concrete;
 
 namespace Comp337.DataAccess.Concrete.EntityFramework
 {
-    public class EfClassroomDal : EfEntityRepositoryBase<Classroom, Comp337Context>, IClassroomDal
+    public class EfCourseRegistrationDal : EfEntityRepositoryBase<CourseRegistration, Comp337Context>, ICourseRegistrationDal
     {
 
     }

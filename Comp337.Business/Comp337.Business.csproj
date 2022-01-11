@@ -44,27 +44,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\ITimeSlotService.cs" />
+    <Compile Include="Abstract\ICourseRegistrationService.cs" />
     <Compile Include="Abstract\IAdvisorService.cs" />
-    <Compile Include="Abstract\IClassroomService.cs" />
     <Compile Include="Abstract\ICourseInstructorService.cs" />
     <Compile Include="Abstract\ICourseService.cs" />
     <Compile Include="Abstract\IDepartmentService.cs" />
     <Compile Include="Abstract\IInstructorService.cs" />
-    <Compile Include="Abstract\ISectionService.cs" />
+    <Compile Include="Abstract\ISemesterService.cs" />
     <Compile Include="Abstract\IStudentService.cs" />
     <Compile Include="Abstract\IUserAuthorizationService.cs" />
     <Compile Include="Abstract\IUserService.cs" />
     <Compile Include="Concrete\AdvisorManager.cs" />
-    <Compile Include="Concrete\ClassroomManager.cs" />
+    <Compile Include="Concrete\SemesterManager.cs" />
+    <Compile Include="Concrete\CourseRegistrationManager .cs" />
     <Compile Include="Concrete\CourseInstructorManager.cs" />
     <Compile Include="Concrete\CourseManager.cs" />
     <Compile Include="Concrete\DeparmentManager.cs" />
     <Compile Include="Concrete\InstructorManager.cs" />
     <Compile Include="Concrete\UserAuthorizationManager.cs" />
-    <Compile Include="Concrete\SectionManager.cs" />
     <Compile Include="Concrete\StudentManager.cs" />
-    <Compile Include="Concrete\TimeSlotManager.cs" />
     <Compile Include="Concrete\UserManager.cs" />
     <Compile Include="DependencyResolvers\Ninject\BusinessModule.cs" />
     <Compile Include="DependencyResolvers\Ninject\InstanceFactory.cs" />

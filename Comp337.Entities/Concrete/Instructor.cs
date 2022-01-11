@@ -4,11 +4,14 @@ namespace Comp337.Entities.Concrete
 {
     public class Instructor : IEntity
     {
-        public int InstructorId { get; set; }
-        public int NationalityId { get; set; }
+        public int Id { get; set; }
+        public int PersonalId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public bool DeleteFlag { get; set; }
+        public int DepartmentId { get; set; }
+        public string PhoneNumber { get; set; }
+        public string ExtensionNumber { get; set; }
+        public string Email { get; set; }
 
     }
 }

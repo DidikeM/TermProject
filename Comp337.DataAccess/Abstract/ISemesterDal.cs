@@ -2,7 +2,7 @@
 
 namespace Comp337.DataAccess.Abstract
 {
-    public interface ISectionDal : IEntityRepository<Section>
+    public interface ISemesterDal : IEntityRepository<Semester>
     {
 
     }

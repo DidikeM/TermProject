@@ -45,8 +45,8 @@ namespace Comp337.WebFormsUI.Forms
                 {
                     CourseName = txtCourseName.Text,
                     CourseCredit = Convert.ToInt16(txtCourseCredit.Text),
-                    SectionId = Convert.ToInt32(txtSectionId.EditValue),
-                    DeleteFlag = false
+                    //SectionId = Convert.ToInt32(txtSectionId.EditValue),
+                    //DeleteFlag = false
                 });
             }
             catch (Exception e)

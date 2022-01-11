@@ -4,10 +4,10 @@ namespace Comp337.Entities.Concrete
 {
     public class Course : IEntity
     {
-        public int CourseId { get; set; }
+        public int Id { get; set; }
+        public string CourseCode { get; set; }
         public string CourseName { get; set; }
-        public decimal CourseCredit { get; set; }
-        public int SectionId { get; set; }
-        public bool DeleteFlag { get; set; }
+        public int CourseCredit { get; set; }
+        public int SemesterId { get; set; }
     }
 }

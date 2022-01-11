@@ -2,7 +2,7 @@
 
 namespace Comp337.DataAccess.Abstract
 {
-    public interface ITimeSlotDal : IEntityRepository<TimeSlot>
+    public interface ICourseRegistrationDal : IEntityRepository<CourseRegistration>
     {
 
     }
