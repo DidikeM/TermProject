@@ -90,6 +90,12 @@
     <Compile Include="Forms\FrmCoordinatorInstructor.Designer.cs">
       <DependentUpon>FrmCoordinatorInstructor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmCoordinatorStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCoordinatorStudent.Designer.cs">
+      <DependentUpon>FrmCoordinatorStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmCourse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCoordinatorInstructor.resx">
       <DependentUpon>FrmCoordinatorInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCoordinatorStudent.resx">
+      <DependentUpon>FrmCoordinatorStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCourse.resx">
       <DependentUpon>FrmCourse.cs</DependentUpon>
