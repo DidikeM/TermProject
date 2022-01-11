@@ -123,6 +123,7 @@ namespace Comp337.WebFormsUI.Forms
             this.btnAssignmentOfInstructorToCourse.ImageOptions.Image = global::Comp337.WebFormsUI.Properties.Resources.assignto_16x16;
             this.btnAssignmentOfInstructorToCourse.ImageOptions.LargeImage = global::Comp337.WebFormsUI.Properties.Resources.assignto_32x321;
             this.btnAssignmentOfInstructorToCourse.Name = "btnAssignmentOfInstructorToCourse";
+            this.btnAssignmentOfInstructorToCourse.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAssignmentOfInstructorToCourse_ItemClick);
             // 
             // btnAssignmentOfAdvisorToStudent
             // 
