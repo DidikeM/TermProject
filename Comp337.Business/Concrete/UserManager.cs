@@ -1,5 +1,6 @@
 ﻿using Comp337.Business.Abstract;
 using Comp337.DataAccess.Abstract;
+using Comp337.Entities.Concrete;
 
 namespace Comp337.Business.Concrete
 {
@@ -10,6 +11,16 @@ namespace Comp337.Business.Concrete
         public UserManager(IUserDal userDal)
         {
             _userDal = userDal;
+        }
+
+        public void Add(User user)
+        {
+            _userDal.Add(user);
+        }
+
+        public void Delete(User user)
+        {
+            _userDal.Delete(user);
         }
     }
 }

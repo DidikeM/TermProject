@@ -7,5 +7,7 @@ namespace Comp337.Business.Abstract
     {
         List<Instructor> GetAll();
         void Add(Instructor instructor);
+        void Update(Instructor instructor);
+        void Delete(Instructor instructor);
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace Comp337.WebFormsUI.Forms
 {
-    partial class FrmCoordinatorInstructor
+    partial class FrmCoordinatorStudent
     {
         /// <summary>
         /// Required designer variable.
@@ -29,14 +29,12 @@ namespace Comp337.WebFormsUI.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCoordinatorInstructor));
-            this.gcInstructor = new DevExpress.XtraGrid.GridControl();
-            this.gvInstructor = new DevExpress.XtraGrid.Views.Grid.GridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCoordinatorStudent));
+            this.gcStudent = new DevExpress.XtraGrid.GridControl();
+            this.gvStudent = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.grpcAdd = new DevExpress.XtraEditors.GroupControl();
             this.txteEMailAdd = new DevExpress.XtraEditors.TextEdit();
             this.lblcEMailAdd = new DevExpress.XtraEditors.LabelControl();
-            this.txteExtensionNumberAdd = new DevExpress.XtraEditors.TextEdit();
-            this.lblcExtensionNumberAdd = new DevExpress.XtraEditors.LabelControl();
             this.txtePhoneNumberAdd = new DevExpress.XtraEditors.TextEdit();
             this.lblcPhoneNumberAdd = new DevExpress.XtraEditors.LabelControl();
             this.sbtnAdd = new DevExpress.XtraEditors.SimpleButton();
@@ -51,8 +49,6 @@ namespace Comp337.WebFormsUI.Forms
             this.grpcUpdate = new DevExpress.XtraEditors.GroupControl();
             this.txteEMailUpdate = new DevExpress.XtraEditors.TextEdit();
             this.lblcEMailUpdate = new DevExpress.XtraEditors.LabelControl();
-            this.txteExtensionNumberUpdate = new DevExpress.XtraEditors.TextEdit();
-            this.lblcExtensionNumberUpdate = new DevExpress.XtraEditors.LabelControl();
             this.txtePhoneNumberUpdate = new DevExpress.XtraEditors.TextEdit();
             this.lblcPhoneNumberUpdate = new DevExpress.XtraEditors.LabelControl();
             this.sbtnDelete = new DevExpress.XtraEditors.SimpleButton();
@@ -65,12 +61,11 @@ namespace Comp337.WebFormsUI.Forms
             this.lblcLastNameUpdate = new DevExpress.XtraEditors.LabelControl();
             this.lblcFirstNameUpdate = new DevExpress.XtraEditors.LabelControl();
             this.lblcPersonalIdUpdate = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.gcInstructor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvInstructor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcStudent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpcAdd)).BeginInit();
             this.grpcAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txteEMailAdd.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txteExtensionNumberAdd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtePhoneNumberAdd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueDepartmentAdd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txteLastNameAdd.Properties)).BeginInit();
@@ -79,7 +74,6 @@ namespace Comp337.WebFormsUI.Forms
             ((System.ComponentModel.ISupportInitialize)(this.grpcUpdate)).BeginInit();
             this.grpcUpdate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txteEMailUpdate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txteExtensionNumberUpdate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtePhoneNumberUpdate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueDepartmentUpdate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txteLastNameUpdate.Properties)).BeginInit();
@@ -87,30 +81,28 @@ namespace Comp337.WebFormsUI.Forms
             ((System.ComponentModel.ISupportInitialize)(this.txtePersonalIdUpdate.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // gcInstructor
+            // gcStudent
             // 
-            this.gcInstructor.Location = new System.Drawing.Point(6, 12);
-            this.gcInstructor.MainView = this.gvInstructor;
-            this.gcInstructor.Name = "gcInstructor";
-            this.gcInstructor.Size = new System.Drawing.Size(820, 210);
-            this.gcInstructor.TabIndex = 1;
-            this.gcInstructor.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvInstructor});
+            this.gcStudent.Location = new System.Drawing.Point(12, 12);
+            this.gcStudent.MainView = this.gvStudent;
+            this.gcStudent.Name = "gcStudent";
+            this.gcStudent.Size = new System.Drawing.Size(820, 210);
+            this.gcStudent.TabIndex = 2;
+            this.gcStudent.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvStudent});
             // 
-            // gvInstructor
+            // gvStudent
             // 
-            this.gvInstructor.GridControl = this.gcInstructor;
-            this.gvInstructor.Name = "gvInstructor";
-            this.gvInstructor.OptionsBehavior.Editable = false;
-            this.gvInstructor.OptionsView.ShowGroupPanel = false;
-            this.gvInstructor.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvInstructor_RowClick);
+            this.gvStudent.GridControl = this.gcStudent;
+            this.gvStudent.Name = "gvStudent";
+            this.gvStudent.OptionsBehavior.Editable = false;
+            this.gvStudent.OptionsView.ShowGroupPanel = false;
+            this.gvStudent.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvStudent_RowClick);
             // 
             // grpcAdd
             // 
             this.grpcAdd.Controls.Add(this.txteEMailAdd);
             this.grpcAdd.Controls.Add(this.lblcEMailAdd);
-            this.grpcAdd.Controls.Add(this.txteExtensionNumberAdd);
-            this.grpcAdd.Controls.Add(this.lblcExtensionNumberAdd);
             this.grpcAdd.Controls.Add(this.txtePhoneNumberAdd);
             this.grpcAdd.Controls.Add(this.lblcPhoneNumberAdd);
             this.grpcAdd.Controls.Add(this.sbtnAdd);
@@ -122,41 +114,26 @@ namespace Comp337.WebFormsUI.Forms
             this.grpcAdd.Controls.Add(this.lblcLastNameAdd);
             this.grpcAdd.Controls.Add(this.lblcFirsNameAdd);
             this.grpcAdd.Controls.Add(this.lblcPersonalIdAdd);
-            this.grpcAdd.Location = new System.Drawing.Point(6, 229);
+            this.grpcAdd.Location = new System.Drawing.Point(12, 230);
             this.grpcAdd.Name = "grpcAdd";
-            this.grpcAdd.Size = new System.Drawing.Size(400, 276);
-            this.grpcAdd.TabIndex = 6;
+            this.grpcAdd.Size = new System.Drawing.Size(400, 243);
+            this.grpcAdd.TabIndex = 7;
             this.grpcAdd.Text = "Add";
             // 
             // txteEMailAdd
             // 
-            this.txteEMailAdd.Location = new System.Drawing.Point(136, 193);
+            this.txteEMailAdd.Location = new System.Drawing.Point(136, 167);
             this.txteEMailAdd.Name = "txteEMailAdd";
             this.txteEMailAdd.Size = new System.Drawing.Size(180, 20);
             this.txteEMailAdd.TabIndex = 20;
             // 
             // lblcEMailAdd
             // 
-            this.lblcEMailAdd.Location = new System.Drawing.Point(93, 196);
+            this.lblcEMailAdd.Location = new System.Drawing.Point(93, 170);
             this.lblcEMailAdd.Name = "lblcEMailAdd";
             this.lblcEMailAdd.Size = new System.Drawing.Size(28, 13);
             this.lblcEMailAdd.TabIndex = 19;
             this.lblcEMailAdd.Text = "E-Mail";
-            // 
-            // txteExtensionNumberAdd
-            // 
-            this.txteExtensionNumberAdd.Location = new System.Drawing.Point(136, 167);
-            this.txteExtensionNumberAdd.Name = "txteExtensionNumberAdd";
-            this.txteExtensionNumberAdd.Size = new System.Drawing.Size(180, 20);
-            this.txteExtensionNumberAdd.TabIndex = 18;
-            // 
-            // lblcExtensionNumberAdd
-            // 
-            this.lblcExtensionNumberAdd.Location = new System.Drawing.Point(34, 170);
-            this.lblcExtensionNumberAdd.Name = "lblcExtensionNumberAdd";
-            this.lblcExtensionNumberAdd.Size = new System.Drawing.Size(87, 13);
-            this.lblcExtensionNumberAdd.TabIndex = 17;
-            this.lblcExtensionNumberAdd.Text = "Extension Number";
             // 
             // txtePhoneNumberAdd
             // 
@@ -176,7 +153,7 @@ namespace Comp337.WebFormsUI.Forms
             // sbtnAdd
             // 
             this.sbtnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnAdd.ImageOptions.Image")));
-            this.sbtnAdd.Location = new System.Drawing.Point(136, 226);
+            this.sbtnAdd.Location = new System.Drawing.Point(136, 196);
             this.sbtnAdd.Name = "sbtnAdd";
             this.sbtnAdd.Size = new System.Drawing.Size(180, 35);
             this.sbtnAdd.TabIndex = 14;
@@ -254,8 +231,6 @@ namespace Comp337.WebFormsUI.Forms
             // 
             this.grpcUpdate.Controls.Add(this.txteEMailUpdate);
             this.grpcUpdate.Controls.Add(this.lblcEMailUpdate);
-            this.grpcUpdate.Controls.Add(this.txteExtensionNumberUpdate);
-            this.grpcUpdate.Controls.Add(this.lblcExtensionNumberUpdate);
             this.grpcUpdate.Controls.Add(this.txtePhoneNumberUpdate);
             this.grpcUpdate.Controls.Add(this.lblcPhoneNumberUpdate);
             this.grpcUpdate.Controls.Add(this.sbtnDelete);
@@ -268,41 +243,26 @@ namespace Comp337.WebFormsUI.Forms
             this.grpcUpdate.Controls.Add(this.lblcLastNameUpdate);
             this.grpcUpdate.Controls.Add(this.lblcFirstNameUpdate);
             this.grpcUpdate.Controls.Add(this.lblcPersonalIdUpdate);
-            this.grpcUpdate.Location = new System.Drawing.Point(426, 229);
+            this.grpcUpdate.Location = new System.Drawing.Point(432, 230);
             this.grpcUpdate.Name = "grpcUpdate";
-            this.grpcUpdate.Size = new System.Drawing.Size(400, 276);
-            this.grpcUpdate.TabIndex = 16;
+            this.grpcUpdate.Size = new System.Drawing.Size(400, 243);
+            this.grpcUpdate.TabIndex = 17;
             this.grpcUpdate.Text = "Update and Delete";
             // 
             // txteEMailUpdate
             // 
-            this.txteEMailUpdate.Location = new System.Drawing.Point(136, 193);
+            this.txteEMailUpdate.Location = new System.Drawing.Point(136, 163);
             this.txteEMailUpdate.Name = "txteEMailUpdate";
             this.txteEMailUpdate.Size = new System.Drawing.Size(180, 20);
             this.txteEMailUpdate.TabIndex = 26;
             // 
             // lblcEMailUpdate
             // 
-            this.lblcEMailUpdate.Location = new System.Drawing.Point(91, 196);
+            this.lblcEMailUpdate.Location = new System.Drawing.Point(91, 166);
             this.lblcEMailUpdate.Name = "lblcEMailUpdate";
             this.lblcEMailUpdate.Size = new System.Drawing.Size(28, 13);
             this.lblcEMailUpdate.TabIndex = 25;
             this.lblcEMailUpdate.Text = "E-Mail";
-            // 
-            // txteExtensionNumberUpdate
-            // 
-            this.txteExtensionNumberUpdate.Location = new System.Drawing.Point(136, 167);
-            this.txteExtensionNumberUpdate.Name = "txteExtensionNumberUpdate";
-            this.txteExtensionNumberUpdate.Size = new System.Drawing.Size(180, 20);
-            this.txteExtensionNumberUpdate.TabIndex = 24;
-            // 
-            // lblcExtensionNumberUpdate
-            // 
-            this.lblcExtensionNumberUpdate.Location = new System.Drawing.Point(32, 170);
-            this.lblcExtensionNumberUpdate.Name = "lblcExtensionNumberUpdate";
-            this.lblcExtensionNumberUpdate.Size = new System.Drawing.Size(87, 13);
-            this.lblcExtensionNumberUpdate.TabIndex = 23;
-            this.lblcExtensionNumberUpdate.Text = "Extension Number";
             // 
             // txtePhoneNumberUpdate
             // 
@@ -322,7 +282,7 @@ namespace Comp337.WebFormsUI.Forms
             // sbtnDelete
             // 
             this.sbtnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnDelete.ImageOptions.Image")));
-            this.sbtnDelete.Location = new System.Drawing.Point(231, 226);
+            this.sbtnDelete.Location = new System.Drawing.Point(231, 189);
             this.sbtnDelete.Name = "sbtnDelete";
             this.sbtnDelete.Size = new System.Drawing.Size(85, 35);
             this.sbtnDelete.TabIndex = 15;
@@ -332,7 +292,7 @@ namespace Comp337.WebFormsUI.Forms
             // sbtnUpdate
             // 
             this.sbtnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnUpdate.ImageOptions.Image")));
-            this.sbtnUpdate.Location = new System.Drawing.Point(136, 226);
+            this.sbtnUpdate.Location = new System.Drawing.Point(136, 189);
             this.sbtnUpdate.Name = "sbtnUpdate";
             this.sbtnUpdate.Size = new System.Drawing.Size(85, 35);
             this.sbtnUpdate.TabIndex = 14;
@@ -405,24 +365,23 @@ namespace Comp337.WebFormsUI.Forms
             this.lblcPersonalIdUpdate.TabIndex = 5;
             this.lblcPersonalIdUpdate.Text = "Personal Id";
             // 
-            // FrmCoordinatorInstructor
+            // FrmCoordinatorStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(838, 517);
+            this.ClientSize = new System.Drawing.Size(846, 487);
             this.Controls.Add(this.grpcUpdate);
             this.Controls.Add(this.grpcAdd);
-            this.Controls.Add(this.gcInstructor);
-            this.Name = "FrmCoordinatorInstructor";
-            this.Text = "Instructors";
-            this.Load += new System.EventHandler(this.FrmCoordinatorInstructor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gcInstructor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvInstructor)).EndInit();
+            this.Controls.Add(this.gcStudent);
+            this.Name = "FrmCoordinatorStudent";
+            this.Text = "FrmCoordinatorStudent";
+            this.Load += new System.EventHandler(this.FrmCoordinatorStudent_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gcStudent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvStudent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpcAdd)).EndInit();
             this.grpcAdd.ResumeLayout(false);
             this.grpcAdd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txteEMailAdd.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txteExtensionNumberAdd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtePhoneNumberAdd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueDepartmentAdd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txteLastNameAdd.Properties)).EndInit();
@@ -432,7 +391,6 @@ namespace Comp337.WebFormsUI.Forms
             this.grpcUpdate.ResumeLayout(false);
             this.grpcUpdate.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txteEMailUpdate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txteExtensionNumberUpdate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtePhoneNumberUpdate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueDepartmentUpdate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txteLastNameUpdate.Properties)).EndInit();
@@ -444,9 +402,13 @@ namespace Comp337.WebFormsUI.Forms
 
         #endregion
 
-        private DevExpress.XtraGrid.GridControl gcInstructor;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvInstructor;
+        private DevExpress.XtraGrid.GridControl gcStudent;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvStudent;
         private DevExpress.XtraEditors.GroupControl grpcAdd;
+        private DevExpress.XtraEditors.TextEdit txteEMailAdd;
+        private DevExpress.XtraEditors.LabelControl lblcEMailAdd;
+        private DevExpress.XtraEditors.TextEdit txtePhoneNumberAdd;
+        private DevExpress.XtraEditors.LabelControl lblcPhoneNumberAdd;
         private DevExpress.XtraEditors.SimpleButton sbtnAdd;
         private DevExpress.XtraEditors.LookUpEdit lueDepartmentAdd;
         private DevExpress.XtraEditors.TextEdit txteLastNameAdd;
@@ -457,6 +419,10 @@ namespace Comp337.WebFormsUI.Forms
         private DevExpress.XtraEditors.LabelControl lblcFirsNameAdd;
         private DevExpress.XtraEditors.LabelControl lblcPersonalIdAdd;
         private DevExpress.XtraEditors.GroupControl grpcUpdate;
+        private DevExpress.XtraEditors.TextEdit txteEMailUpdate;
+        private DevExpress.XtraEditors.LabelControl lblcEMailUpdate;
+        private DevExpress.XtraEditors.TextEdit txtePhoneNumberUpdate;
+        private DevExpress.XtraEditors.LabelControl lblcPhoneNumberUpdate;
         private DevExpress.XtraEditors.SimpleButton sbtnDelete;
         private DevExpress.XtraEditors.SimpleButton sbtnUpdate;
         private DevExpress.XtraEditors.LookUpEdit lueDepartmentUpdate;
@@ -467,17 +433,5 @@ namespace Comp337.WebFormsUI.Forms
         private DevExpress.XtraEditors.LabelControl lblcLastNameUpdate;
         private DevExpress.XtraEditors.LabelControl lblcFirstNameUpdate;
         private DevExpress.XtraEditors.LabelControl lblcPersonalIdUpdate;
-        private DevExpress.XtraEditors.TextEdit txteEMailAdd;
-        private DevExpress.XtraEditors.LabelControl lblcEMailAdd;
-        private DevExpress.XtraEditors.TextEdit txteExtensionNumberAdd;
-        private DevExpress.XtraEditors.LabelControl lblcExtensionNumberAdd;
-        private DevExpress.XtraEditors.TextEdit txtePhoneNumberAdd;
-        private DevExpress.XtraEditors.LabelControl lblcPhoneNumberAdd;
-        private DevExpress.XtraEditors.TextEdit txteEMailUpdate;
-        private DevExpress.XtraEditors.LabelControl lblcEMailUpdate;
-        private DevExpress.XtraEditors.TextEdit txteExtensionNumberUpdate;
-        private DevExpress.XtraEditors.LabelControl lblcExtensionNumberUpdate;
-        private DevExpress.XtraEditors.TextEdit txtePhoneNumberUpdate;
-        private DevExpress.XtraEditors.LabelControl lblcPhoneNumberUpdate;
     }
 }

@@ -24,5 +24,15 @@ namespace Comp337.Business.Concrete
         {
             _instructorDal.Add(instructor);
         }
+
+        public void Update(Instructor instructor)
+        {
+            _instructorDal.Update(instructor);
+        }
+
+        public void Delete(Instructor instructor)
+        {
+            _instructorDal.Delete(instructor);
+        }
     }
 }

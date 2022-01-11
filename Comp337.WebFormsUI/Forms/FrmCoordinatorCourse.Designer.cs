@@ -198,7 +198,7 @@ namespace Comp337.WebFormsUI.Forms
             this.grpcUpdate.Name = "grpcUpdate";
             this.grpcUpdate.Size = new System.Drawing.Size(400, 200);
             this.grpcUpdate.TabIndex = 15;
-            this.grpcUpdate.Text = "Update and Remove";
+            this.grpcUpdate.Text = "Update and Delete";
             // 
             // sbtnDelete
             // 

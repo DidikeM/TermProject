@@ -36,8 +36,8 @@ namespace Comp337.WebFormsUI.Forms
             this.btnInstructors = new DevExpress.XtraBars.BarButtonItem();
             this.btnStudents = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.btnAssignmentOfTranier = new DevExpress.XtraBars.BarButtonItem();
-            this.btnAssignmentOfAdvisor = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAssignmentOfInstructorToCourse = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAssignmentOfAdvisorToStudent = new DevExpress.XtraBars.BarButtonItem();
             this.btnUserInformation = new DevExpress.XtraBars.BarButtonItem();
             this.btnSettings = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -61,8 +61,8 @@ namespace Comp337.WebFormsUI.Forms
             this.btnInstructors,
             this.btnStudents,
             this.barButtonItem5,
-            this.btnAssignmentOfTranier,
-            this.btnAssignmentOfAdvisor,
+            this.btnAssignmentOfInstructorToCourse,
+            this.btnAssignmentOfAdvisorToStudent,
             this.btnUserInformation,
             this.btnSettings});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
@@ -111,6 +111,7 @@ namespace Comp337.WebFormsUI.Forms
             this.btnStudents.ImageOptions.Image = global::Comp337.WebFormsUI.Properties.Resources.customers_16x16;
             this.btnStudents.ImageOptions.LargeImage = global::Comp337.WebFormsUI.Properties.Resources.customers_32x32;
             this.btnStudents.Name = "btnStudents";
+            this.btnStudents.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnStudents_ItemClick);
             // 
             // barButtonItem5
             // 
@@ -118,21 +119,21 @@ namespace Comp337.WebFormsUI.Forms
             this.barButtonItem5.Id = 5;
             this.barButtonItem5.Name = "barButtonItem5";
             // 
-            // btnAssignmentOfTranier
+            // btnAssignmentOfInstructorToCourse
             // 
-            this.btnAssignmentOfTranier.Caption = "Assignment Of Tranier";
-            this.btnAssignmentOfTranier.Id = 6;
-            this.btnAssignmentOfTranier.ImageOptions.Image = global::Comp337.WebFormsUI.Properties.Resources.assignto_16x16;
-            this.btnAssignmentOfTranier.ImageOptions.LargeImage = global::Comp337.WebFormsUI.Properties.Resources.assignto_32x321;
-            this.btnAssignmentOfTranier.Name = "btnAssignmentOfTranier";
+            this.btnAssignmentOfInstructorToCourse.Caption = "Assignment of Instructor to Course";
+            this.btnAssignmentOfInstructorToCourse.Id = 6;
+            this.btnAssignmentOfInstructorToCourse.ImageOptions.Image = global::Comp337.WebFormsUI.Properties.Resources.assignto_16x16;
+            this.btnAssignmentOfInstructorToCourse.ImageOptions.LargeImage = global::Comp337.WebFormsUI.Properties.Resources.assignto_32x321;
+            this.btnAssignmentOfInstructorToCourse.Name = "btnAssignmentOfInstructorToCourse";
             // 
-            // btnAssignmentOfAdvisor
+            // btnAssignmentOfAdvisorToStudent
             // 
-            this.btnAssignmentOfAdvisor.Caption = "Assignment Of Advisor";
-            this.btnAssignmentOfAdvisor.Id = 7;
-            this.btnAssignmentOfAdvisor.ImageOptions.Image = global::Comp337.WebFormsUI.Properties.Resources.usergroup_16x16;
-            this.btnAssignmentOfAdvisor.ImageOptions.LargeImage = global::Comp337.WebFormsUI.Properties.Resources.usergroup_32x32;
-            this.btnAssignmentOfAdvisor.Name = "btnAssignmentOfAdvisor";
+            this.btnAssignmentOfAdvisorToStudent.Caption = "Assignment of Advisor to Student";
+            this.btnAssignmentOfAdvisorToStudent.Id = 7;
+            this.btnAssignmentOfAdvisorToStudent.ImageOptions.Image = global::Comp337.WebFormsUI.Properties.Resources.usergroup_16x16;
+            this.btnAssignmentOfAdvisorToStudent.ImageOptions.LargeImage = global::Comp337.WebFormsUI.Properties.Resources.usergroup_32x32;
+            this.btnAssignmentOfAdvisorToStudent.Name = "btnAssignmentOfAdvisorToStudent";
             // 
             // btnUserInformation
             // 
@@ -163,8 +164,8 @@ namespace Comp337.WebFormsUI.Forms
             this.ribbonPageGroup1.ItemLinks.Add(this.btnCourses);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnInstructors);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnStudents);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnAssignmentOfTranier);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnAssignmentOfAdvisor);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnAssignmentOfInstructorToCourse);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnAssignmentOfAdvisorToStudent);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnUserInformation);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
@@ -210,8 +211,8 @@ namespace Comp337.WebFormsUI.Forms
         private DevExpress.XtraBars.BarButtonItem btnInstructors;
         private DevExpress.XtraBars.BarButtonItem btnStudents;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
-        private DevExpress.XtraBars.BarButtonItem btnAssignmentOfTranier;
-        private DevExpress.XtraBars.BarButtonItem btnAssignmentOfAdvisor;
+        private DevExpress.XtraBars.BarButtonItem btnAssignmentOfInstructorToCourse;
+        private DevExpress.XtraBars.BarButtonItem btnAssignmentOfAdvisorToStudent;
         private DevExpress.XtraBars.BarButtonItem btnUserInformation;
         private DevExpress.XtraBars.BarButtonItem btnSettings;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;

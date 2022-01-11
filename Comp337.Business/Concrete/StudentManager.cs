@@ -22,5 +22,20 @@ namespace Comp337.Business.Concrete
         {
             return _studentDal.GetAll();
         }
+
+        public void Add(Student student)
+        {
+            _studentDal.Add(student);
+        }
+
+        public void Update(Student student)
+        {
+            _studentDal.Update(student);
+        }
+
+        public void Delete(Student student)
+        {
+            _studentDal.Delete(student);
+        }
     }
 }
