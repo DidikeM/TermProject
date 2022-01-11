@@ -72,7 +72,7 @@ namespace Comp337.WebFormsUI.Forms
             this.ribbonPage1});
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
-            this.ribbon.Size = new System.Drawing.Size(949, 158);
+            this.ribbon.Size = new System.Drawing.Size(861, 158);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // btnHomePage
@@ -166,10 +166,10 @@ namespace Comp337.WebFormsUI.Forms
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 594);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 609);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(949, 24);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(861, 24);
             // 
             // xtraTabbedMdiManager1
             // 
@@ -179,7 +179,7 @@ namespace Comp337.WebFormsUI.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 618);
+            this.ClientSize = new System.Drawing.Size(861, 633);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;
@@ -187,6 +187,7 @@ namespace Comp337.WebFormsUI.Forms
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Coordinator Main";
+            this.Load += new System.EventHandler(this.FrmCoordinatorMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);

@@ -24,5 +24,15 @@ namespace Comp337.Business.Concrete
         {
             return _courseDal.GetAll();
         }
+
+        public void update(Course course)
+        {
+            _courseDal.Update(course);
+        }
+
+        public void Delete(Course course)
+        {
+            _courseDal.Delete(course);
+        }
     }
 }

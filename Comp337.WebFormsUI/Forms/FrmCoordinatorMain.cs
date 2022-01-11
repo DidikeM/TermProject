@@ -35,5 +35,10 @@ namespace Comp337.WebFormsUI.Forms
                 frmCoordinatorCourse.Show();
             }
         }
+
+        private void FrmCoordinatorMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
