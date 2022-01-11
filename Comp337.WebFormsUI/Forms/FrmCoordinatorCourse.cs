@@ -55,9 +55,9 @@ namespace Comp337.WebFormsUI.Forms
 
         private void gvCourse_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            txteCourseCodeUpdate.Text = ((Course)gvCourse.GetFocusedRow()).CourseCode;
-            txteCourseCreditUpdate.Text = ((Course)gvCourse.GetFocusedRow()).CourseCredit.ToString();
-            txteCourseNameUpdate.Text = ((Course) gvCourse.GetFocusedRow()).CourseName;
+            txteCourseCodeUpdate.Text = ((Course)gvCourse.GetFocusedRow()).CourseCode.TrimEnd();
+            txteCourseCreditUpdate.Text = ((Course)gvCourse.GetFocusedRow()).CourseCredit.ToString().TrimEnd();
+            txteCourseNameUpdate.Text = ((Course) gvCourse.GetFocusedRow()).CourseName.TrimEnd();
             lueSemesterUpdate.EditValue = ((Course) gvCourse.GetFocusedRow()).SemesterId;
         }
 
