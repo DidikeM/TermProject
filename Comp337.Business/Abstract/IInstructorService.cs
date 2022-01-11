@@ -1,7 +1,11 @@
-﻿namespace Comp337.Business.Abstract
+﻿using System.Collections.Generic;
+using Comp337.Entities.Concrete;
+
+namespace Comp337.Business.Abstract
 {
     public interface IInstructorService
     {
-        
+        List<Instructor> GetAll();
+        void Add(Instructor instructor);
     }
 }

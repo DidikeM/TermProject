@@ -5,7 +5,7 @@ namespace Comp337.Entities.Concrete
     public class Instructor : IEntity
     {
         public int Id { get; set; }
-        public int PersonalId { get; set; }
+        public string PersonalId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int DepartmentId { get; set; }

@@ -25,6 +25,7 @@ namespace Comp337.WebFormsUI.Forms
         }
 
         private FrmCoordinatorCourse frmCoordinatorCourse;
+        private FrmCoordinatorInstructor frmCoordinatorInstructor;
 
         private void btnCourses_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -39,6 +40,16 @@ namespace Comp337.WebFormsUI.Forms
         private void FrmCoordinatorMain_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnInstructors_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (frmCoordinatorInstructor == null)
+            {
+                frmCoordinatorInstructor = new FrmCoordinatorInstructor();
+                frmCoordinatorInstructor.MdiParent = this;
+                frmCoordinatorInstructor.Show();
+            }
         }
     }
 }

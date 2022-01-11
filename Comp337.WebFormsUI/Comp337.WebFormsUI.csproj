@@ -84,6 +84,12 @@
     <Compile Include="Forms\FrmCoordinatorCourse.Designer.cs">
       <DependentUpon>FrmCoordinatorCourse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmCoordinatorInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCoordinatorInstructor.Designer.cs">
+      <DependentUpon>FrmCoordinatorInstructor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmCourse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FrmCoordinatorCourse.resx">
       <DependentUpon>FrmCoordinatorCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCoordinatorInstructor.resx">
+      <DependentUpon>FrmCoordinatorInstructor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCourse.resx">
       <DependentUpon>FrmCourse.cs</DependentUpon>

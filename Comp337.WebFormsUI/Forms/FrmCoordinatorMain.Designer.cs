@@ -99,6 +99,7 @@ namespace Comp337.WebFormsUI.Forms
             this.btnInstructors.ImageOptions.Image = global::Comp337.WebFormsUI.Properties.Resources.meeting_16x16;
             this.btnInstructors.ImageOptions.LargeImage = global::Comp337.WebFormsUI.Properties.Resources.meeting_32x32;
             this.btnInstructors.Name = "btnInstructors";
+            this.btnInstructors.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnInstructors_ItemClick);
             // 
             // btnStudents
             // 
@@ -166,7 +167,7 @@ namespace Comp337.WebFormsUI.Forms
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 609);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 667);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(861, 24);
@@ -179,7 +180,7 @@ namespace Comp337.WebFormsUI.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 633);
+            this.ClientSize = new System.Drawing.Size(861, 691);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;
