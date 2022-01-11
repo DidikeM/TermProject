@@ -38,7 +38,7 @@ namespace Comp337.WebFormsUI.Forms
 
         private void LoadInstructorOfCourse()
         {
-            gcInstructorOfCourse.DataSource = _instructorService.GetAll(p => p.DepartmentId == 1);
+            gcInstructorOfCourse.DataSource = _instructorService.GetAll(/*p => p.DepartmentId == 1*/);
         }
 
         private void LoadCourses()

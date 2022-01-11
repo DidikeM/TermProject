@@ -6,5 +6,7 @@ namespace Comp337.Business.Abstract
     {
         void Add(User user);
         void Delete(User user);
+        User GetByUsername(User user);
+        void Update(User user);
     }
 }
