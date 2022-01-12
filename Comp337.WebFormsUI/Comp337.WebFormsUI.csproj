@@ -54,7 +54,9 @@
     <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -121,6 +123,12 @@
     <Compile Include="Forms\FrmCoordinatorMain.Designer.cs">
       <DependentUpon>FrmCoordinatorMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmLoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLoginScreen.Designer.cs">
+      <DependentUpon>FrmLoginScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\InstructorsForms\FrmInstructorMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCoordinatorMain.resx">
       <DependentUpon>FrmCoordinatorMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLoginScreen.resx">
+      <DependentUpon>FrmLoginScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InstructorsForms\FrmInstructorMain.resx">
       <DependentUpon>FrmInstructorMain.cs</DependentUpon>
