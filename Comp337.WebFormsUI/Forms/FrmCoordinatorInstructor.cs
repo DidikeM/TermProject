@@ -69,6 +69,8 @@ namespace Comp337.WebFormsUI.Forms
                 UserAdd();
                 LoadInstructor();
                 ClearAdd();
+                //_userService.ControlLogin(new User());
+                //_userService.GetByUsername(new User());
             }
         }
 

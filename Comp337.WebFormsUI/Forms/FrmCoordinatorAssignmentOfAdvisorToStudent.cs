@@ -134,7 +134,22 @@ namespace Comp337.WebFormsUI.Forms
 
         private void sbtnDelete_Click(object sender, EventArgs e)
         {
-
+            if (txteDepartment.Text == "")
+            {
+                MessageBox.Show("Önce eçiniz");
+            }
+            else
+            {
+                _advisorService.DeleteByStudentIdandInstructorId(new Advisor
+                {
+                    StudentId = ((Student)gvStudentOfAdvisor.GetFocusedRow()).Id,
+                    InstructorId = ((Instructor)gvAdvisor.GetFocusedRow()).Id
+                });
+                ClearTxtes();
+                sbtnAdd.Enabled = false;
+                sbtnDelete.Enabled = false;
+                LoadStudentOfAdvisor(((Instructor)gvAdvisor.GetFocusedRow()).Id);
+            }
         }
     }
 }
