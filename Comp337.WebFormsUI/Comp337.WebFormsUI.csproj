@@ -78,6 +78,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Comp337DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmCoordinatorAssignmentOfAdvisorToStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCoordinatorAssignmentOfAdvisorToStudent.Designer.cs">
+      <DependentUpon>FrmCoordinatorAssignmentOfAdvisorToStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmCoordinatorAssignmentOfInstructorToCourse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FrmCoordinatorAssignmentOfAdvisorToStudent.resx">
+      <DependentUpon>FrmCoordinatorAssignmentOfAdvisorToStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCoordinatorAssignmentOfInstructorToCourse.resx">
       <DependentUpon>FrmCoordinatorAssignmentOfInstructorToCourse.cs</DependentUpon>
     </EmbeddedResource>

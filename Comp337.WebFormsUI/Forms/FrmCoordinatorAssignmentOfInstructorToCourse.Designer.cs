@@ -37,6 +37,8 @@ namespace Comp337.WebFormsUI.Forms
             this.gcInstructor = new DevExpress.XtraGrid.GridControl();
             this.gvInstructor = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.grpcAdd = new DevExpress.XtraEditors.GroupControl();
+            this.sbtnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.txteDepartment = new DevExpress.XtraEditors.TextEdit();
             this.txteEMail = new DevExpress.XtraEditors.TextEdit();
             this.lblcEMail = new DevExpress.XtraEditors.LabelControl();
             this.sbtnAdd = new DevExpress.XtraEditors.SimpleButton();
@@ -47,8 +49,6 @@ namespace Comp337.WebFormsUI.Forms
             this.lblcLastName = new DevExpress.XtraEditors.LabelControl();
             this.lblcFirsName = new DevExpress.XtraEditors.LabelControl();
             this.lblcPersonalId = new DevExpress.XtraEditors.LabelControl();
-            this.txteDepartment = new DevExpress.XtraEditors.TextEdit();
-            this.sbtnDelete = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gcCourse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCourse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcInstructorOfCourse)).BeginInit();
@@ -57,11 +57,11 @@ namespace Comp337.WebFormsUI.Forms
             ((System.ComponentModel.ISupportInitialize)(this.gvInstructor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpcAdd)).BeginInit();
             this.grpcAdd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txteDepartment.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txteEMail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txteLastName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txteFirstName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtePersonalId.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txteDepartment.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gcCourse
@@ -137,6 +137,25 @@ namespace Comp337.WebFormsUI.Forms
             this.grpcAdd.Size = new System.Drawing.Size(408, 226);
             this.grpcAdd.TabIndex = 7;
             // 
+            // sbtnDelete
+            // 
+            this.sbtnDelete.Enabled = false;
+            this.sbtnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnDelete.ImageOptions.Image")));
+            this.sbtnDelete.Location = new System.Drawing.Point(309, 174);
+            this.sbtnDelete.Name = "sbtnDelete";
+            this.sbtnDelete.Size = new System.Drawing.Size(87, 35);
+            this.sbtnDelete.TabIndex = 22;
+            this.sbtnDelete.Text = "Delete";
+            this.sbtnDelete.Click += new System.EventHandler(this.sbtnDelete_Click);
+            // 
+            // txteDepartment
+            // 
+            this.txteDepartment.Enabled = false;
+            this.txteDepartment.Location = new System.Drawing.Point(216, 115);
+            this.txteDepartment.Name = "txteDepartment";
+            this.txteDepartment.Size = new System.Drawing.Size(180, 20);
+            this.txteDepartment.TabIndex = 21;
+            // 
             // txteEMail
             // 
             this.txteEMail.Enabled = false;
@@ -155,12 +174,14 @@ namespace Comp337.WebFormsUI.Forms
             // 
             // sbtnAdd
             // 
+            this.sbtnAdd.Enabled = false;
             this.sbtnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnAdd.ImageOptions.Image")));
             this.sbtnAdd.Location = new System.Drawing.Point(216, 174);
             this.sbtnAdd.Name = "sbtnAdd";
             this.sbtnAdd.Size = new System.Drawing.Size(87, 35);
             this.sbtnAdd.TabIndex = 14;
             this.sbtnAdd.Text = "Add";
+            this.sbtnAdd.Click += new System.EventHandler(this.sbtnAdd_Click);
             // 
             // txteLastName
             // 
@@ -219,23 +240,6 @@ namespace Comp337.WebFormsUI.Forms
             this.lblcPersonalId.TabIndex = 5;
             this.lblcPersonalId.Text = "Personal Id";
             // 
-            // txteDepartment
-            // 
-            this.txteDepartment.Enabled = false;
-            this.txteDepartment.Location = new System.Drawing.Point(216, 115);
-            this.txteDepartment.Name = "txteDepartment";
-            this.txteDepartment.Size = new System.Drawing.Size(180, 20);
-            this.txteDepartment.TabIndex = 21;
-            // 
-            // sbtnDelete
-            // 
-            this.sbtnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.sbtnDelete.Location = new System.Drawing.Point(309, 174);
-            this.sbtnDelete.Name = "sbtnDelete";
-            this.sbtnDelete.Size = new System.Drawing.Size(87, 35);
-            this.sbtnDelete.TabIndex = 22;
-            this.sbtnDelete.Text = "Delete";
-            // 
             // FrmCoordinatorAssignmentOfInstructorToCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,11 +261,11 @@ namespace Comp337.WebFormsUI.Forms
             ((System.ComponentModel.ISupportInitialize)(this.grpcAdd)).EndInit();
             this.grpcAdd.ResumeLayout(false);
             this.grpcAdd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txteDepartment.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txteEMail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txteLastName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txteFirstName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtePersonalId.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txteDepartment.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

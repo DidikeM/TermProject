@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using Comp337.Business.Abstract;
 using Comp337.Business.DependencyResolvers.Ninject;
 using Comp337.Entities.Concrete;
+using DevExpress.Emf;
 
 namespace Comp337.WebFormsUI.Forms
 {
@@ -39,6 +40,7 @@ namespace Comp337.WebFormsUI.Forms
         {
             LoadCourses();
             LoadInstructor();
+            ClearTxtes();
         }
 
         private void LoadInstructor()
@@ -63,6 +65,8 @@ namespace Comp337.WebFormsUI.Forms
             _courseInstructors = _courseInstructorService.GetByCourseId(courseId);
             //MessageBox.Show(courseId.ToString());
             _instructors.Clear();
+            //_instructors = new List<Instructor>();
+            //gcInstructorOfCourse.DataSource = _instructors;
             foreach (var courseInstructor in _courseInstructors)
             {
                 _instructors.Add(_instructorService.GetById(courseInstructor.InstructorId));
@@ -73,11 +77,31 @@ namespace Comp337.WebFormsUI.Forms
             //{
             //    MessageBox.Show(instructor.FirstName);
             //}
+            gcInstructorOfCourse.DataSource = null;
             gcInstructorOfCourse.DataSource = _instructors;
+
+            ////Burda kaldım data source güncellenmiyo
+            ////Email kısmında hata ver data updatelenmiyo
+        }
+
+
+        private void ClearTxtes()
+        {
+            txtePersonalId.Text = "";
+            txteFirstName.Text = "";
+            txteLastName.Text = "";
+            txteDepartment.Text = "";
+            txteEMail.Text = "";
         }
 
         private void gvInstructor_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
+
+            if (!sbtnAdd.Enabled)
+            {
+                sbtnAdd.Enabled = true;
+                sbtnDelete.Enabled = false;
+            }
             txtePersonalId.Text = ((Instructor)gvInstructor.GetFocusedRow()).PersonalId;
             txteFirstName.Text = ((Instructor)gvInstructor.GetFocusedRow()).FirstName;
             txteLastName.Text = ((Instructor)gvInstructor.GetFocusedRow()).LastName;
@@ -87,7 +111,62 @@ namespace Comp337.WebFormsUI.Forms
 
         private void gvInstructorOfCourse_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
+            if (!sbtnDelete.Enabled)
+            {
+                sbtnAdd.Enabled = false;
+                sbtnDelete.Enabled = true;
+            }
+            txtePersonalId.Text = ((Instructor)gvInstructorOfCourse.GetFocusedRow()).PersonalId;
+            txteFirstName.Text = ((Instructor)gvInstructorOfCourse.GetFocusedRow()).FirstName;
+            txteLastName.Text = ((Instructor)gvInstructorOfCourse.GetFocusedRow()).LastName;
+            txteDepartment.Text = _departmentService.GetById(((Instructor)gvInstructorOfCourse.GetFocusedRow()).DepartmentId).DepartmentName;
+            txteEMail.Text = ((Instructor)gvInstructorOfCourse.GetFocusedRow()).Email;
+        }
 
+        private void sbtnAdd_Click(object sender, EventArgs e)
+        {
+            if (txteDepartment.Text == "")
+            {
+                MessageBox.Show("Önce eçiniz");
+            }
+            else if (_courseInstructorService.ControlByCourseIdandInstructorId(new CourseInstructor {CourseId = ((Course)gvCourse.GetFocusedRow()).Id, InstructorId = ((Instructor)gvInstructor.GetFocusedRow()).Id }))
+            {
+                MessageBox.Show("Bu hoca bu derse zaten eklidir.");
+            }
+            else
+            {
+                //((Course)gvCourse.GetFocusedRow()).Id.ToString()
+                //((Instructor)gvInstructor.GetFocusedRow()).Id;
+                _courseInstructorService.Add(new CourseInstructor
+                {
+                    CourseId = ((Course)gvCourse.GetFocusedRow()).Id,
+                    InstructorId = ((Instructor)gvInstructor.GetFocusedRow()).Id
+                });
+                ClearTxtes();
+                sbtnAdd.Enabled = false;
+                sbtnDelete.Enabled = false;
+                LoadInstructorOfCourse(((Course)gvCourse.GetFocusedRow()).Id);
+            }
+        }
+
+        private void sbtnDelete_Click(object sender, EventArgs e)
+        {
+            if (txteDepartment.Text == "")
+            {
+                MessageBox.Show("Önce eçiniz");
+            }
+            else
+            {
+                _courseInstructorService.DeleteByCourseIdandInstructorId(new CourseInstructor
+                {
+                    CourseId = ((Course)gvCourse.GetFocusedRow()).Id,
+                    InstructorId = ((Instructor)gvInstructorOfCourse.GetFocusedRow()).Id
+                });
+                ClearTxtes();
+                sbtnAdd.Enabled = false;
+                sbtnDelete.Enabled = false;
+                LoadInstructorOfCourse(((Course)gvCourse.GetFocusedRow()).Id);
+            }
         }
     }
 }
