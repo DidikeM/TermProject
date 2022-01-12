@@ -57,7 +57,7 @@ namespace Comp337.WebFormsUI.Forms
             {
                 MessageBox.Show("Please fill the boxes!");
             }
-            else if (_userService.GetByUsername(new User { Username = txteEMailAdd.Text.TrimEnd() })!=null)
+            else if (_userService.GetByUsername(new User { Username = txteEMailAdd.Text.TrimEnd() }) != null)
             {
                 MessageBox.Show("This E-Mail Adreess is already registered in the system!");
                 //User içinde user namelerde
@@ -160,7 +160,7 @@ namespace Comp337.WebFormsUI.Forms
             {
                 Id = _userService.GetByUsername(new User { Username = ((Instructor)gvInstructor.GetFocusedRow()).Email.TrimEnd() }).Id,
                 Username = txteEMailUpdate.Text,
-                Password = txtePersonalIdAdd.Text,
+                Password = txtePersonalIdUpdate.Text,
                 //Password = _userService.GetByUsername(new User { Username = ((Instructor)gvInstructor.GetFocusedRow()).Email.TrimEnd() }).Password.TrimEnd(),
                 UserAuthorizationId = 2
             });
@@ -168,14 +168,14 @@ namespace Comp337.WebFormsUI.Forms
 
         private void sbtnDelete_Click(object sender, EventArgs e)
         {
-            if (txtePersonalIdUpdate.Text == "" || txteFirstNameUpdate.Text == "" || txteLastNameUpdate.Text == "" || (Department)lueDepartmentUpdate.GetSelectedDataRow() == null || txteEMailUpdate.Text == "" || txtePhoneNumberUpdate.Text == "" || txteExtensionNumberUpdate.Text == "" || txteEMailUpdate.Text == "")
+            if /*(((Instructor)gvInstructor.GetFocusedRow()).Id == 0)*/(txtePersonalIdUpdate.Text == "" || txteFirstNameUpdate.Text == "" || txteLastNameUpdate.Text == "" || (Department)lueDepartmentUpdate.GetSelectedDataRow() == null || txteEMailUpdate.Text == "" || txtePhoneNumberUpdate.Text == "" || txteExtensionNumberUpdate.Text == "" || txteEMailUpdate.Text == "")
             {
                 MessageBox.Show("Please fill the boxes");
             }
             else
             {
-                UserDelete();
                 InstructorDelete();
+                UserDelete();
                 LoadInstructor();
                 ClearUpdate();
             }
