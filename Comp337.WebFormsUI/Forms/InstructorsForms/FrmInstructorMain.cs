@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraBars;
+﻿using Comp337.Entities.Concrete;
+using DevExpress.XtraBars;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +14,13 @@ namespace Comp337.WebFormsUI.Forms.InstructorsForms
 {
     public partial class FrmInstructorMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public FrmInstructorMain()
+        public FrmInstructorMain(Instructor instructor)
         {
             InitializeComponent();
+            _instructor = instructor;
         }
+
+        Instructor _instructor;
 
         private FrmInstructorCourseInfoAndAddStudent frmInstructorCourseInfoAndAddStudent;
 
@@ -24,7 +28,7 @@ namespace Comp337.WebFormsUI.Forms.InstructorsForms
         {
             if (frmInstructorCourseInfoAndAddStudent == null)
             {
-                frmInstructorCourseInfoAndAddStudent = new FrmInstructorCourseInfoAndAddStudent();
+                frmInstructorCourseInfoAndAddStudent = new FrmInstructorCourseInfoAndAddStudent(_instructor);
                 frmInstructorCourseInfoAndAddStudent.MdiParent = this;
                 frmInstructorCourseInfoAndAddStudent.Show();
             }

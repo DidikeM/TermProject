@@ -23,10 +23,12 @@ namespace Comp337.WebFormsUI.Forms
         {
             InitializeComponent();
             _userService = InstanceFactory.GetInstance<IUserService>();
+            _instructorService = InstanceFactory.GetInstance<IInstructorService>();
         }
 
 
 
+        IInstructorService _instructorService;
         private IUserService _userService;
         private void FrmLoginScreen_Load(object sender, EventArgs e)
         {
@@ -62,15 +64,13 @@ namespace Comp337.WebFormsUI.Forms
             }
             else if (user.UserAuthorizationId == 2)
             {
-                OpenForm(new FrmInstructorMain());
+                OpenForm(new FrmInstructorMain(_instructorService.GetById(1));
                 this.Hide();
-
             }
             else if (_user.UserAuthorizationId == 3)
             {
                 OpenForm(new FrmStudentsForm());
                 this.Hide();
-                
             }
             else
             {

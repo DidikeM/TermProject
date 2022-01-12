@@ -16,7 +16,7 @@ namespace Comp337.WebFormsUI.Forms.InstructorsForms
 {
     public partial class FrmInstructorCourseInfoAndAddStudent : DevExpress.XtraEditors.XtraForm
     {
-        public FrmInstructorCourseInfoAndAddStudent()
+        public FrmInstructorCourseInfoAndAddStudent(Instructor instructor)
         {
             InitializeComponent();
             _studentService = InstanceFactory.GetInstance<IStudentService>();
@@ -25,6 +25,7 @@ namespace Comp337.WebFormsUI.Forms.InstructorsForms
             _courseRegistrationService = InstanceFactory.GetInstance<ICourseRegistrationService>();
             _semesterService = InstanceFactory.GetInstance<ISemesterService>();
             //_customer = customer;
+            _instructor = instructor;
             _instructor = new Instructor {Id = 1};
             _students = new List<Student>();
             _courses = new List<Course>();
