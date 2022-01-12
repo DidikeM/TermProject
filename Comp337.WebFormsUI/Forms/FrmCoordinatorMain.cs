@@ -28,6 +28,7 @@ namespace Comp337.WebFormsUI.Forms
         private FrmCoordinatorInstructor frmCoordinatorInstructor;
         private FrmCoordinatorStudent frmCoordinatorStudent;
         private FrmCoordinatorAssignmentOfInstructorToCourse frmCoordinatorAssignmentOfInstructorToCourse;
+        private FrmCoordinatorAssignmentOfAdvisorToStudent frmCoordinatorAssignmentOfAdvisorToStudent;
 
         private void btnCourses_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -71,6 +72,16 @@ namespace Comp337.WebFormsUI.Forms
                 frmCoordinatorAssignmentOfInstructorToCourse = new FrmCoordinatorAssignmentOfInstructorToCourse();
                 frmCoordinatorAssignmentOfInstructorToCourse.MdiParent = this;
                 frmCoordinatorAssignmentOfInstructorToCourse.Show();
+            }
+        }
+
+        private void btnAssignmentOfAdvisorToStudent_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (frmCoordinatorAssignmentOfAdvisorToStudent == null)
+            {
+                frmCoordinatorAssignmentOfAdvisorToStudent = new FrmCoordinatorAssignmentOfAdvisorToStudent();
+                frmCoordinatorAssignmentOfAdvisorToStudent.MdiParent = this;
+                frmCoordinatorAssignmentOfAdvisorToStudent.Show();
             }
         }
     }
