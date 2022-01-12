@@ -9,5 +9,6 @@ namespace Comp337.Business.Abstract
         bool ControlByStudentIdandInstructorId(Advisor advisor);
         void Add(Advisor advisor);
         void DeleteByStudentIdandInstructorId(Advisor advisor);
+        bool ControlByStudentId(Advisor advisor);
     }
 }

@@ -32,6 +32,19 @@ namespace Comp337.Business.Concrete
             }
         }
 
+        public bool ControlByStudentId(Advisor advisor)
+        {
+            //Todo Eğer gönderilen değer varsa true yoksa false dödürür
+            if (_advisorDal.Get(p => p.StudentId == advisor.StudentId) != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public void Add(Advisor advisor)
         {
             _advisorDal.Add(advisor);

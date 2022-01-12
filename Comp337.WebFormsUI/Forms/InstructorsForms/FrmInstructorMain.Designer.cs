@@ -88,6 +88,7 @@ namespace Comp337.WebFormsUI.Forms.InstructorsForms
             this.btnAddStudents.ImageOptions.Image = global::Comp337.WebFormsUI.Properties.Resources.about_16x16;
             this.btnAddStudents.ImageOptions.LargeImage = global::Comp337.WebFormsUI.Properties.Resources.about_32x32;
             this.btnAddStudents.Name = "btnAddStudents";
+            this.btnAddStudents.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddStudents_ItemClick);
             // 
             // btnCourseInformation
             // 

@@ -17,5 +17,17 @@ namespace Comp337.WebFormsUI.Forms.InstructorsForms
         {
             InitializeComponent();
         }
+
+        private FrmInstructorCourseInfoAndAddStudent frmInstructorCourseInfoAndAddStudent;
+
+        private void btnAddStudents_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (frmInstructorCourseInfoAndAddStudent == null)
+            {
+                frmInstructorCourseInfoAndAddStudent = new FrmInstructorCourseInfoAndAddStudent();
+                frmInstructorCourseInfoAndAddStudent.MdiParent = this;
+                frmInstructorCourseInfoAndAddStudent.Show();
+            }
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Comp337.WebFormsUI.Forms;
+using Comp337.WebFormsUI.Forms.InstructorsForms;
 
 namespace Comp337.WebFormsUI
 {
