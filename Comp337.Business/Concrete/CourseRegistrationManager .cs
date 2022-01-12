@@ -18,5 +18,36 @@ namespace Comp337.Business.Concrete
         {
             return _courseRegistrationDal.GetAll(p => p.StudentId == id);
         }
+
+        public bool ControlByStudentIdandCourseId(CourseRegistration courseRegistration)
+        {
+            //Todo Eğer gönderilen değer varsa true yoksa false dödürür
+            if (_courseRegistrationDal.Get(p => p.StudentId == courseRegistration.StudentId && p.CourseId == courseRegistration.CourseId) != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void DeleteByStudentIdandCourseId(CourseRegistration courseRegistration)
+        {
+            var a = _courseRegistrationDal.Get(p => p.StudentId == courseRegistration.StudentId && p.CourseId == courseRegistration.CourseId);
+            if (a != null)
+            {
+                _courseRegistrationDal.Delete(a);
+            }
+            else
+            {
+
+            }
+        }
+
+        public void Add(CourseRegistration courseRegistration)
+        {
+            _courseRegistrationDal.Add(courseRegistration);
+        }
     }
 }

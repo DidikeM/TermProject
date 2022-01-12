@@ -80,34 +80,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Comp337DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmCoordinatorAssignmentOfAdvisorToStudent.cs">
+    <Compile Include="Forms\CoordinatorForms\FrmCoordinatorAssignmentOfAdvisorToStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCoordinatorAssignmentOfAdvisorToStudent.Designer.cs">
+    <Compile Include="Forms\CoordinatorForms\FrmCoordinatorAssignmentOfAdvisorToStudent.Designer.cs">
       <DependentUpon>FrmCoordinatorAssignmentOfAdvisorToStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmCoordinatorAssignmentOfInstructorToCourse.cs">
+    <Compile Include="Forms\CoordinatorForms\FrmCoordinatorAssignmentOfInstructorToCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCoordinatorAssignmentOfInstructorToCourse.Designer.cs">
+    <Compile Include="Forms\CoordinatorForms\FrmCoordinatorAssignmentOfInstructorToCourse.Designer.cs">
       <DependentUpon>FrmCoordinatorAssignmentOfInstructorToCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmCoordinatorCourse.cs">
+    <Compile Include="Forms\CoordinatorForms\FrmCoordinatorCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCoordinatorCourse.Designer.cs">
+    <Compile Include="Forms\CoordinatorForms\FrmCoordinatorCourse.Designer.cs">
       <DependentUpon>FrmCoordinatorCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmCoordinatorInstructor.cs">
+    <Compile Include="Forms\CoordinatorForms\FrmCoordinatorInstructor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCoordinatorInstructor.Designer.cs">
+    <Compile Include="Forms\CoordinatorForms\FrmCoordinatorInstructor.Designer.cs">
       <DependentUpon>FrmCoordinatorInstructor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmCoordinatorStudent.cs">
+    <Compile Include="Forms\CoordinatorForms\FrmCoordinatorStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCoordinatorStudent.Designer.cs">
+    <Compile Include="Forms\CoordinatorForms\FrmCoordinatorStudent.Designer.cs">
       <DependentUpon>FrmCoordinatorStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmCourse.cs">
@@ -117,10 +117,10 @@
       <DependentUpon>FrmCourse.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCoordinatorMain.cs">
+    <Compile Include="Forms\CoordinatorForms\FrmCoordinatorMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCoordinatorMain.Designer.cs">
+    <Compile Include="Forms\CoordinatorForms\FrmCoordinatorMain.Designer.cs">
       <DependentUpon>FrmCoordinatorMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmLoginScreen.cs">
@@ -129,34 +129,34 @@
     <Compile Include="Forms\FrmLoginScreen.Designer.cs">
       <DependentUpon>FrmLoginScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\InstructorsForms\FrmInstructorCourseInfoAndAddStudent.cs">
+    <Compile Include="Forms\InstructorForms\FrmInstructorAddCourseToStudents.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\InstructorsForms\FrmInstructorCourseInfoAndAddStudent.Designer.cs">
-      <DependentUpon>FrmInstructorCourseInfoAndAddStudent.cs</DependentUpon>
+    <Compile Include="Forms\InstructorForms\FrmInstructorAddCourseToStudents.Designer.cs">
+      <DependentUpon>FrmInstructorAddCourseToStudents.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\InstructorsForms\FrmInstructorMain.cs">
+    <Compile Include="Forms\InstructorForms\FrmInstructorMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\InstructorsForms\FrmInstructorMain.Designer.cs">
+    <Compile Include="Forms\InstructorForms\FrmInstructorMain.Designer.cs">
       <DependentUpon>FrmInstructorMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\StudentsForms\FrmRStudentsegisteredCourses.cs">
+    <Compile Include="Forms\StudentForms\FrmRStudentsegisteredCourses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\StudentsForms\FrmRStudentsegisteredCourses.Designer.cs">
+    <Compile Include="Forms\StudentForms\FrmRStudentsegisteredCourses.Designer.cs">
       <DependentUpon>FrmRStudentsegisteredCourses.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\StudentsForms\FrmStudentRegisteredStudents.cs">
+    <Compile Include="Forms\StudentForms\FrmStudentRegisteredStudents.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\StudentsForms\FrmStudentRegisteredStudents.Designer.cs">
+    <Compile Include="Forms\StudentForms\FrmStudentRegisteredStudents.Designer.cs">
       <DependentUpon>FrmStudentRegisteredStudents.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\StudentsForms\FrmStudentsForm.cs">
+    <Compile Include="Forms\StudentForms\FrmStudentsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\StudentsForms\FrmStudentsForm.Designer.cs">
+    <Compile Include="Forms\StudentForms\FrmStudentsForm.Designer.cs">
       <DependentUpon>FrmStudentsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\XtraForm1.cs">
@@ -167,43 +167,43 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\FrmCoordinatorAssignmentOfAdvisorToStudent.resx">
+    <EmbeddedResource Include="Forms\CoordinatorForms\FrmCoordinatorAssignmentOfAdvisorToStudent.resx">
       <DependentUpon>FrmCoordinatorAssignmentOfAdvisorToStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmCoordinatorAssignmentOfInstructorToCourse.resx">
+    <EmbeddedResource Include="Forms\CoordinatorForms\FrmCoordinatorAssignmentOfInstructorToCourse.resx">
       <DependentUpon>FrmCoordinatorAssignmentOfInstructorToCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmCoordinatorCourse.resx">
+    <EmbeddedResource Include="Forms\CoordinatorForms\FrmCoordinatorCourse.resx">
       <DependentUpon>FrmCoordinatorCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmCoordinatorInstructor.resx">
+    <EmbeddedResource Include="Forms\CoordinatorForms\FrmCoordinatorInstructor.resx">
       <DependentUpon>FrmCoordinatorInstructor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmCoordinatorStudent.resx">
+    <EmbeddedResource Include="Forms\CoordinatorForms\FrmCoordinatorStudent.resx">
       <DependentUpon>FrmCoordinatorStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCourse.resx">
       <DependentUpon>FrmCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmCoordinatorMain.resx">
+    <EmbeddedResource Include="Forms\CoordinatorForms\FrmCoordinatorMain.resx">
       <DependentUpon>FrmCoordinatorMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLoginScreen.resx">
       <DependentUpon>FrmLoginScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\InstructorsForms\FrmInstructorCourseInfoAndAddStudent.resx">
-      <DependentUpon>FrmInstructorCourseInfoAndAddStudent.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\InstructorForms\FrmInstructorAddCourseToStudents.resx">
+      <DependentUpon>FrmInstructorAddCourseToStudents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\InstructorsForms\FrmInstructorMain.resx">
+    <EmbeddedResource Include="Forms\InstructorForms\FrmInstructorMain.resx">
       <DependentUpon>FrmInstructorMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\StudentsForms\FrmRStudentsegisteredCourses.resx">
+    <EmbeddedResource Include="Forms\StudentForms\FrmRStudentsegisteredCourses.resx">
       <DependentUpon>FrmRStudentsegisteredCourses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\StudentsForms\FrmStudentRegisteredStudents.resx">
+    <EmbeddedResource Include="Forms\StudentForms\FrmStudentRegisteredStudents.resx">
       <DependentUpon>FrmStudentRegisteredStudents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\StudentsForms\FrmStudentsForm.resx">
+    <EmbeddedResource Include="Forms\StudentForms\FrmStudentsForm.resx">
       <DependentUpon>FrmStudentsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\XtraForm1.resx">

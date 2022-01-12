@@ -22,13 +22,13 @@ namespace Comp337.WebFormsUI.Forms.InstructorsForms
 
         Instructor _instructor;
 
-        private FrmInstructorCourseInfoAndAddStudent frmInstructorCourseInfoAndAddStudent;
+        private FrmInstructorAddCourseToStudents frmInstructorCourseInfoAndAddStudent;
 
         private void btnAddStudents_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (frmInstructorCourseInfoAndAddStudent == null)
             {
-                frmInstructorCourseInfoAndAddStudent = new FrmInstructorCourseInfoAndAddStudent(_instructor);
+                frmInstructorCourseInfoAndAddStudent = new FrmInstructorAddCourseToStudents(_instructor);
                 frmInstructorCourseInfoAndAddStudent.MdiParent = this;
                 frmInstructorCourseInfoAndAddStudent.Show();
             }

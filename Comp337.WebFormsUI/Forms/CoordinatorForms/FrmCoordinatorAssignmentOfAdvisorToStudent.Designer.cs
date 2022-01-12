@@ -1,5 +1,5 @@
 ﻿
-namespace Comp337.WebFormsUI.Forms
+namespace Comp337.WebFormsUI.Forms.CoordinatorForms
 {
     partial class FrmCoordinatorAssignmentOfAdvisorToStudent
     {

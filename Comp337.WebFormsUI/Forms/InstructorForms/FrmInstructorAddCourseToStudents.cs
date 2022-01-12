@@ -14,9 +14,9 @@ using Comp337.Entities.Concrete;
 
 namespace Comp337.WebFormsUI.Forms.InstructorsForms
 {
-    public partial class FrmInstructorCourseInfoAndAddStudent : DevExpress.XtraEditors.XtraForm
+    public partial class FrmInstructorAddCourseToStudents : DevExpress.XtraEditors.XtraForm
     {
-        public FrmInstructorCourseInfoAndAddStudent(Instructor instructor)
+        public FrmInstructorAddCourseToStudents(Instructor instructor)
         {
             InitializeComponent();
             _studentService = InstanceFactory.GetInstance<IStudentService>();
@@ -116,6 +116,54 @@ namespace Comp337.WebFormsUI.Forms.InstructorsForms
             txteCourseName.Text = ((Course)gvCourseOfStudent.GetFocusedRow()).CourseName;
             txteCourseCredit.Text = ((Course)gvCourseOfStudent.GetFocusedRow()).CourseCredit.ToString();
             txteSemester.Text = _semesterService.GetById(((Course)gvCourseOfStudent.GetFocusedRow()).SemesterId).Name;
+        }
+
+        private void sbtnAdd_Click(object sender, EventArgs e)
+        {
+            if (txteCourseCode.Text == "")
+            {
+                MessageBox.Show("Önce eçiniz");
+            }
+            else if (_courseRegistrationService.ControlByStudentIdandCourseId(new CourseRegistration { CourseId = ((Course)gvCourse.GetFocusedRow()).Id, StudentId = ((Student)gvStudentOfAdvisor.GetFocusedRow()).Id }))
+            {
+                MessageBox.Show("Bu öğrenci bu dersi zaten almaktadır!");
+            }
+            //else if (_courseRegistrationService.ControlByStudentId(new Advisor { StudentId = ((Student)gvStudent.GetFocusedRow()).Id }))
+            //{
+            //    MessageBox.Show("Bu öğrencinin danışmanı vardır");
+            //}
+            else
+            {
+                _courseRegistrationService.Add(new CourseRegistration
+                {
+                    StudentId = ((Student)gvStudentOfAdvisor.GetFocusedRow()).Id,
+                    CourseId = ((Course)gvCourse.GetFocusedRow()).Id
+                });
+                ClearTxtes();
+                sbtnAdd.Enabled = false;
+                sbtnDelete.Enabled = false;
+                LoadCourseOfStudent(((Student)gvStudentOfAdvisor.GetFocusedRow()).Id);
+            }
+        }
+
+        private void sbtnDelete_Click(object sender, EventArgs e)
+        {
+            if (txteCourseCode.Text == "")
+            {
+                MessageBox.Show("Önce eçiniz");
+            }
+            else
+            {
+                _courseRegistrationService.DeleteByStudentIdandCourseId(new CourseRegistration()
+                {
+                    StudentId = ((Student)gvStudentOfAdvisor.GetFocusedRow()).Id,
+                    CourseId = ((Course)gvCourse.GetFocusedRow()).Id
+                });
+                ClearTxtes();
+                sbtnAdd.Enabled = false;
+                sbtnDelete.Enabled = false;
+                LoadCourseOfStudent(((Student)gvStudentOfAdvisor.GetFocusedRow()).Id);
+            }
         }
     }
 }

@@ -11,7 +11,8 @@ namespace Comp337.Business.Abstract
         void Add(Instructor instructor);    
         void Update(Instructor instructor);
         void Delete(Instructor instructor);
-        Instructor GetById(int id); 
+        Instructor GetById(int id);
+        Instructor GetByEMail(string eMail);    
         //List<Instructor> GetByCourseId(int courseId);
     }
 }

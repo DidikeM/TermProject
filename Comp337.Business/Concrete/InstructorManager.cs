@@ -41,5 +41,9 @@ namespace Comp337.Business.Concrete
             return _instructorDal.Get(p => p.Id == id);
         }
 
+        public Instructor GetByEMail(string eMail)
+        {
+            return _instructorDal.Get(p => p.Email == eMail) ;
+        }
     }
 }

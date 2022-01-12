@@ -1,20 +1,10 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 using Comp337.Business.Abstract;
 using Comp337.Business.DependencyResolvers.Ninject;
-using Comp337.DataAccess.Concrete.EntityFramework;
 using Comp337.Entities.Concrete;
-using DevExpress.XtraBars.Ribbon.BackstageView.Accessible;
 
-namespace Comp337.WebFormsUI.Forms
+namespace Comp337.WebFormsUI.Forms.CoordinatorForms
 {
     public partial class FrmCoordinatorCourse : DevExpress.XtraEditors.XtraForm
     {

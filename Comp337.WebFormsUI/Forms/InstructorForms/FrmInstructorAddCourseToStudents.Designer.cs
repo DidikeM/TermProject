@@ -1,7 +1,7 @@
 ﻿
 namespace Comp337.WebFormsUI.Forms.InstructorsForms
 {
-    partial class FrmInstructorCourseInfoAndAddStudent
+    partial class FrmInstructorAddCourseToStudents
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Comp337.WebFormsUI.Forms.InstructorsForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInstructorCourseInfoAndAddStudent));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInstructorAddCourseToStudents));
             this.grpcAdd = new DevExpress.XtraEditors.GroupControl();
             this.sbtnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.txteSemester = new DevExpress.XtraEditors.TextEdit();
@@ -87,6 +87,7 @@ namespace Comp337.WebFormsUI.Forms.InstructorsForms
             this.sbtnDelete.Size = new System.Drawing.Size(87, 35);
             this.sbtnDelete.TabIndex = 22;
             this.sbtnDelete.Text = "Delete";
+            this.sbtnDelete.Click += new System.EventHandler(this.sbtnDelete_Click);
             // 
             // txteSemester
             // 
@@ -105,6 +106,7 @@ namespace Comp337.WebFormsUI.Forms.InstructorsForms
             this.sbtnAdd.Size = new System.Drawing.Size(87, 35);
             this.sbtnAdd.TabIndex = 14;
             this.sbtnAdd.Text = "Add";
+            this.sbtnAdd.Click += new System.EventHandler(this.sbtnAdd_Click);
             // 
             // txteCourseCredit
             // 
@@ -217,7 +219,7 @@ namespace Comp337.WebFormsUI.Forms.InstructorsForms
             this.gvStudentOfAdvisor.OptionsView.ShowGroupPanel = false;
             this.gvStudentOfAdvisor.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvStudentOfAdvisor_RowClick);
             // 
-            // FrmInstructorCourseInfoAndAddStudent
+            // FrmInstructorAddCourseToStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -226,8 +228,8 @@ namespace Comp337.WebFormsUI.Forms.InstructorsForms
             this.Controls.Add(this.gcCourse);
             this.Controls.Add(this.gcCourseOfStudent);
             this.Controls.Add(this.gcStudentOfAdvisor);
-            this.Name = "FrmInstructorCourseInfoAndAddStudent";
-            this.Text = "FrmInstructorCourseInfoAndAddStudent";
+            this.Name = "FrmInstructorAddCourseToStudents";
+            this.Text = "Add Coorse to Students";
             this.Load += new System.EventHandler(this.FrmInstructorCourseInfoAndAddStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grpcAdd)).EndInit();
             this.grpcAdd.ResumeLayout(false);

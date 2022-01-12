@@ -1,18 +1,11 @@
-﻿using DevExpress.XtraEditors;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Comp337.Business.Abstract;
 using Comp337.Business.DependencyResolvers.Ninject;
 using Comp337.Entities.Concrete;
 
-namespace Comp337.WebFormsUI.Forms
+namespace Comp337.WebFormsUI.Forms.CoordinatorForms
 {
     public partial class FrmCoordinatorAssignmentOfAdvisorToStudent : DevExpress.XtraEditors.XtraForm
     {

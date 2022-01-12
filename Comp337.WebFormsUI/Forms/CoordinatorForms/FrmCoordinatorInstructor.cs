@@ -1,41 +1,34 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 using Comp337.Business.Abstract;
 using Comp337.Business.DependencyResolvers.Ninject;
 using Comp337.Entities.Concrete;
 
-namespace Comp337.WebFormsUI.Forms
+namespace Comp337.WebFormsUI.Forms.CoordinatorForms
 {
-    public partial class FrmCoordinatorStudent : DevExpress.XtraEditors.XtraForm
+    public partial class FrmCoordinatorInstructor : DevExpress.XtraEditors.XtraForm
     {
-        public FrmCoordinatorStudent()
+        public FrmCoordinatorInstructor()
         {
             InitializeComponent();
-            _StudentService = InstanceFactory.GetInstance<IStudentService>();
+            _instructorService = InstanceFactory.GetInstance<IInstructorService>();
             _userService = InstanceFactory.GetInstance<IUserService>();
             _departmentService = InstanceFactory.GetInstance<IDepartmentService>();
         }
 
-        private IStudentService _StudentService;
+        private IInstructorService _instructorService;
         private IUserService _userService;
         private IDepartmentService _departmentService;
 
-        private void FrmCoordinatorStudent_Load(object sender, EventArgs e)
+        private void FrmCoordinatorInstructor_Load(object sender, EventArgs e)
         {
-            LoadStudent();
+            LoadInstructor();
             LoadDepartment();
         }
-        private void LoadStudent()
+
+        private void LoadInstructor()
         {
-            gcStudent.DataSource = _StudentService.GetAll();
+            gcInstructor.DataSource = _instructorService.GetAll();
         }
 
         private void LoadDepartment()
@@ -52,9 +45,9 @@ namespace Comp337.WebFormsUI.Forms
 
         private void sbtnAdd_Click(object sender, EventArgs e)
         {
-            if (txtePersonalIdAdd.Text == "" || txteFirstNameAdd.Text == "" || txteLastNameAdd.Text == "" || (Department)lueDepartmentAdd.GetSelectedDataRow() == null || txteEMailAdd.Text == "" || txtePhoneNumberAdd.Text == "" || txteEMailAdd.Text == "")
+            if (txtePersonalIdAdd.Text == "" || txteFirstNameAdd.Text == "" || txteLastNameAdd.Text == "" || (Department)lueDepartmentAdd.GetSelectedDataRow() == null || txteEMailAdd.Text == "" || txtePhoneNumberAdd.Text == "" || txteExtensionNumberAdd.Text == "" || txteEMailAdd.Text == "")
             {
-                MessageBox.Show("Please fill the boxes");
+                MessageBox.Show("Please fill the boxes!");
             }
             else if (_userService.GetByUsername(new User { Username = txteEMailAdd.Text.TrimEnd() }) != null)
             {
@@ -64,10 +57,12 @@ namespace Comp337.WebFormsUI.Forms
             }
             else
             {
-                StudentAdd();
+                InstructorAdd();
                 UserAdd();
-                LoadStudent();
+                LoadInstructor();
                 ClearAdd();
+                //_userService.ControlLogin(new User());
+                //_userService.GetByUsername(new User());
             }
         }
 
@@ -78,18 +73,20 @@ namespace Comp337.WebFormsUI.Forms
             txteLastNameAdd.Text = "";
             lueDepartmentAdd.EditValue = null;
             txtePhoneNumberAdd.Text = "";
+            txteExtensionNumberAdd.Text = "";
             txteEMailAdd.Text = "";
         }
 
-        protected void StudentAdd()
+        protected void InstructorAdd()
         {
-            _StudentService.Add(new Student
+            _instructorService.Add(new Instructor
             {
                 PersonalId = txtePersonalIdAdd.Text,
                 FirstName = txteFirstNameAdd.Text,
                 LastName = txteLastNameAdd.Text,
                 DepartmentId = ((Department)lueDepartmentAdd.GetSelectedDataRow()).Id,
                 PhoneNumber = txtePhoneNumberAdd.Text,
+                ExtensionNumber = txteExtensionNumberAdd.Text,
                 Email = txteEMailAdd.Text
             });
         }
@@ -100,15 +97,15 @@ namespace Comp337.WebFormsUI.Forms
             {
                 Username = txteEMailAdd.Text,
                 Password = txtePersonalIdAdd.Text,
-                UserAuthorizationId = 3
+                UserAuthorizationId = 2
             });
         }
 
         private void sbtnUpdate_Click(object sender, EventArgs e)
         {
-            if (txtePersonalIdUpdate.Text == "" || txteFirstNameUpdate.Text == "" || txteLastNameUpdate.Text == "" || (Department)lueDepartmentUpdate.GetSelectedDataRow() == null || txteEMailUpdate.Text == "" || txtePhoneNumberUpdate.Text == "" || txteEMailUpdate.Text == "")
+            if (txtePersonalIdUpdate.Text == "" || txteFirstNameUpdate.Text == "" || txteLastNameUpdate.Text == "" || (Department)lueDepartmentUpdate.GetSelectedDataRow() == null || txteEMailUpdate.Text == "" || txtePhoneNumberUpdate.Text == "" || txteExtensionNumberUpdate.Text == "" || txteEMailUpdate.Text == "")
             {
-                MessageBox.Show("Please fill the boxes");
+                MessageBox.Show("Please fill the boxes!");
             }
             else if (_userService.GetByUsername(new User { Username = txteEMailUpdate.Text.TrimEnd() }) != null)
             {
@@ -118,9 +115,9 @@ namespace Comp337.WebFormsUI.Forms
             }
             else
             {
-                StudentUpdate();
+                InstructorUpdate();
                 UserUpdate();
-                LoadStudent();
+                LoadInstructor();
                 ClearUpdate();
             }
         }
@@ -132,19 +129,21 @@ namespace Comp337.WebFormsUI.Forms
             txteLastNameUpdate.Text = "";
             lueDepartmentUpdate.EditValue = null;
             txtePhoneNumberUpdate.Text = "";
+            txteExtensionNumberUpdate.Text = "";
             txteEMailUpdate.Text = "";
         }
 
-        private void StudentUpdate()
+        private void InstructorUpdate()
         {
-            _StudentService.Update(new Student()
+            _instructorService.Update(new Instructor
             {
-                Id = ((Student)gvStudent.GetFocusedRow()).Id,
+                Id = ((Instructor)gvInstructor.GetFocusedRow()).Id,
                 PersonalId = txtePersonalIdUpdate.Text,
                 FirstName = txteFirstNameUpdate.Text,
                 LastName = txteLastNameUpdate.Text,
                 DepartmentId = ((Department)lueDepartmentUpdate.GetSelectedDataRow()).Id,
                 PhoneNumber = txtePhoneNumberUpdate.Text,
+                ExtensionNumber = txteExtensionNumberUpdate.Text,
                 Email = txteEMailUpdate.Text
             });
         }
@@ -153,58 +152,64 @@ namespace Comp337.WebFormsUI.Forms
         {
             _userService.Update(new User
             {
-                Id = _userService.GetByUsername(new User { Username = ((Student)gvStudent.GetFocusedRow()).Email.TrimEnd() }).Id,
+                Id = _userService.GetByUsername(new User { Username = ((Instructor)gvInstructor.GetFocusedRow()).Email.TrimEnd() }).Id,
                 Username = txteEMailUpdate.Text,
                 Password = txtePersonalIdUpdate.Text,
                 //Password = _userService.GetByUsername(new User { Username = ((Instructor)gvInstructor.GetFocusedRow()).Email.TrimEnd() }).Password.TrimEnd(),
-                UserAuthorizationId = 3
+                UserAuthorizationId = 2
             });
         }
 
         private void sbtnDelete_Click(object sender, EventArgs e)
         {
-            if (txtePersonalIdUpdate.Text == "" || txteFirstNameUpdate.Text == "" || txteLastNameUpdate.Text == "" || (Department)lueDepartmentUpdate.GetSelectedDataRow() == null || txteEMailUpdate.Text == "" || txtePhoneNumberUpdate.Text == "" || txteEMailUpdate.Text == "")
+            if /*(((Instructor)gvInstructor.GetFocusedRow()).Id == 0)*/(txtePersonalIdUpdate.Text == "" || txteFirstNameUpdate.Text == "" || txteLastNameUpdate.Text == "" || (Department)lueDepartmentUpdate.GetSelectedDataRow() == null || txteEMailUpdate.Text == "" || txtePhoneNumberUpdate.Text == "" || txteExtensionNumberUpdate.Text == "" || txteEMailUpdate.Text == "")
             {
                 MessageBox.Show("Please fill the boxes");
             }
             else
             {
-                StudentDelete();
+                InstructorDelete();
                 UserDelete();
-                LoadStudent();
+                LoadInstructor();
                 ClearUpdate();
             }
         }
 
-        private void StudentDelete()
+        private void UserDelete()
         {
-            _StudentService.Delete(new Student
+            _userService.Delete(new User
             {
-                Id = ((Student)gvStudent.GetFocusedRow()).Id,
+                Id = _userService.GetByUsername(new User { Username = ((Instructor)gvInstructor.GetFocusedRow()).Email.TrimEnd() }).Id
+            });
+        }
+
+        private void InstructorDelete()
+        {
+            _instructorService.Delete(new Instructor
+            {
+                Id = ((Instructor)gvInstructor.GetFocusedRow()).Id,
                 //DepartmentId = ((Department)lueDepartmentUpdate.GetSelectedDataRow()).Id,
                 //Email = txteEMailUpdate.Text,
+                //ExtensionNumber = txteExtensionNumberUpdate.Text,
                 //FirstName = txteFirstNameUpdate.Text,
                 //LastName = txteLastNameUpdate.Text,
                 //PersonalId = txtePersonalIdUpdate.Text,
                 //PhoneNumber = txtePhoneNumberUpdate.Text
             });
-        }
-        private void UserDelete()
-        {
-            _userService.Delete(new User
-            {
-                Id = _userService.GetByUsername(new User { Username = ((Student)gvStudent.GetFocusedRow()).Email.TrimEnd() }).Id
-            });
+
+            //_userService.Get( );
+
         }
 
-        private void gvStudent_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        private void gvInstructor_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            txtePersonalIdUpdate.Text = ((Student)gvStudent.GetFocusedRow()).PersonalId.TrimEnd();
-            txteFirstNameUpdate.Text = ((Student)gvStudent.GetFocusedRow()).FirstName.TrimEnd();
-            txteLastNameUpdate.Text = ((Student)gvStudent.GetFocusedRow()).LastName.TrimEnd();
-            lueDepartmentUpdate.EditValue = ((Student)gvStudent.GetFocusedRow()).DepartmentId;
-            txtePhoneNumberUpdate.Text = ((Student)gvStudent.GetFocusedRow()).PhoneNumber.TrimEnd();
-            txteEMailUpdate.Text = ((Student)gvStudent.GetFocusedRow()).Email.TrimEnd();
+            txtePersonalIdUpdate.Text = ((Instructor)gvInstructor.GetFocusedRow()).PersonalId.TrimEnd();
+            txteFirstNameUpdate.Text = ((Instructor)gvInstructor.GetFocusedRow()).FirstName.TrimEnd();
+            txteLastNameUpdate.Text = ((Instructor)gvInstructor.GetFocusedRow()).LastName.TrimEnd();
+            lueDepartmentUpdate.EditValue = ((Instructor)gvInstructor.GetFocusedRow()).DepartmentId;
+            txtePhoneNumberUpdate.Text = ((Instructor)gvInstructor.GetFocusedRow()).PhoneNumber.TrimEnd();
+            txteExtensionNumberUpdate.Text = ((Instructor)gvInstructor.GetFocusedRow()).ExtensionNumber.TrimEnd();
+            txteEMailUpdate.Text = ((Instructor)gvInstructor.GetFocusedRow()).Email.TrimEnd();
         }
     }
 }

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Comp337.Business.Abstract;
 using Comp337.Business.DependencyResolvers.Ninject;
 using Comp337.Entities.Concrete;
+using Comp337.WebFormsUI.Forms.CoordinatorForms;
 using Comp337.WebFormsUI.Forms.InstructorsForms;
 using Comp337.WebFormsUI.Forms.StudentsForms;
 using DevExpress.Internal.WinApi.Windows.UI.Notifications;
@@ -50,27 +51,28 @@ namespace Comp337.WebFormsUI.Forms
             }
         }
 
-        void OpenForm(Form form)
-        {
-            form.Show();
-        }
-
         private void LoadForms(User user)
         {
             if (user.UserAuthorizationId == 1)
             {
-                OpenForm(new FrmCoordinatorMain());
+                FrmCoordinatorMain frmCoordinatorMain = new FrmCoordinatorMain();
                 this.Hide();
+                frmCoordinatorMain.ShowDialog();
+                this.Show();
             }
             else if (user.UserAuthorizationId == 2)
             {
-                OpenForm(new FrmInstructorMain(_instructorService.GetById(1));
+                FrmInstructorMain frmInstructorMain = new FrmInstructorMain(_instructorService.GetByEMail(user.Username));
                 this.Hide();
+                frmInstructorMain.ShowDialog();
+                this.Show();
             }
             else if (_user.UserAuthorizationId == 3)
             {
-                OpenForm(new FrmStudentsForm());
+                FrmStudentsForm frmStudentsForm = new FrmStudentsForm();
                 this.Hide();
+                frmStudentsForm.ShowDialog();
+                this.Show();
             }
             else
             {
