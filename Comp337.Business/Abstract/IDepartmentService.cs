@@ -6,5 +6,6 @@ namespace Comp337.Business.Abstract
     public interface IDepartmentService
     {
         List<Department> GetAll();
+        Department GetById(int id);
     }
 }

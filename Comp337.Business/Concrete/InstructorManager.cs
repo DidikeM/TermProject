@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 using Comp337.Business.Abstract;
 using Comp337.DataAccess.Abstract;
 using Comp337.Entities.Concrete;
@@ -13,8 +15,7 @@ namespace Comp337.Business.Concrete
         {
             _instructorDal = instructorDal;
         }
-
-
+        
         public List<Instructor> GetAll()
         {
             return _instructorDal.GetAll();
@@ -34,5 +35,11 @@ namespace Comp337.Business.Concrete
         {
             _instructorDal.Delete(instructor);
         }
+
+        public Instructor GetById(int id)
+        {
+            return _instructorDal.Get(p => p.Id == id);
+        }
+
     }
 }

@@ -52,13 +52,20 @@ namespace Comp337.WebFormsUI.Forms
 
         private void sbtnAdd_Click(object sender, EventArgs e)
         {
-            if (txtePersonalIdAdd.Text == "" || txteFirstNameAdd.Text == "" || txteLastNameAdd.Text == "" || (Department)lueDepartmentAdd.GetSelectedDataRow() == null || txteEMailAdd.Text == "" || txtePhoneNumberAdd.Text == "" ||  txteEMailAdd.Text == "")
+            if (txtePersonalIdAdd.Text == "" || txteFirstNameAdd.Text == "" || txteLastNameAdd.Text == "" || (Department)lueDepartmentAdd.GetSelectedDataRow() == null || txteEMailAdd.Text == "" || txtePhoneNumberAdd.Text == "" || txteEMailAdd.Text == "")
             {
                 MessageBox.Show("Please fill the boxes");
+            }
+            else if (_userService.GetByUsername(new User { Username = txteEMailAdd.Text.TrimEnd() }) != null)
+            {
+                MessageBox.Show("This E-Mail Adreess is already registered in the system!");
+                //User içinde user namelerde
+                //txteEMailAdd.Text
             }
             else
             {
                 StudentAdd();
+                UserAdd();
                 LoadStudent();
                 ClearAdd();
             }
@@ -85,24 +92,34 @@ namespace Comp337.WebFormsUI.Forms
                 PhoneNumber = txtePhoneNumberAdd.Text,
                 Email = txteEMailAdd.Text
             });
+        }
 
+        private void UserAdd()
+        {
             _userService.Add(new User
             {
                 Username = txteEMailAdd.Text,
                 Password = txtePersonalIdAdd.Text,
-                UserAuthorizationId = 2
+                UserAuthorizationId = 3
             });
         }
 
         private void sbtnUpdate_Click(object sender, EventArgs e)
         {
-            if (txtePersonalIdUpdate.Text == "" || txteFirstNameUpdate.Text == "" || txteLastNameUpdate.Text == "" || (Department)lueDepartmentUpdate.GetSelectedDataRow() == null || txteEMailUpdate.Text == "" || txtePhoneNumberUpdate.Text == "" ||  txteEMailUpdate.Text == "")
+            if (txtePersonalIdUpdate.Text == "" || txteFirstNameUpdate.Text == "" || txteLastNameUpdate.Text == "" || (Department)lueDepartmentUpdate.GetSelectedDataRow() == null || txteEMailUpdate.Text == "" || txtePhoneNumberUpdate.Text == "" || txteEMailUpdate.Text == "")
             {
                 MessageBox.Show("Please fill the boxes");
+            }
+            else if (_userService.GetByUsername(new User { Username = txteEMailUpdate.Text.TrimEnd() }) != null)
+            {
+                MessageBox.Show("This E-Mail Adreess is already registered in the system!");
+                //User içinde user namelerde
+                //txteEMailAdd.Text
             }
             else
             {
                 StudentUpdate();
+                UserUpdate();
                 LoadStudent();
                 ClearUpdate();
             }
@@ -132,6 +149,18 @@ namespace Comp337.WebFormsUI.Forms
             });
         }
 
+        private void UserUpdate()
+        {
+            _userService.Update(new User
+            {
+                Id = _userService.GetByUsername(new User { Username = ((Student)gvStudent.GetFocusedRow()).Email.TrimEnd() }).Id,
+                Username = txteEMailUpdate.Text,
+                Password = txtePersonalIdUpdate.Text,
+                //Password = _userService.GetByUsername(new User { Username = ((Instructor)gvInstructor.GetFocusedRow()).Email.TrimEnd() }).Password.TrimEnd(),
+                UserAuthorizationId = 3
+            });
+        }
+
         private void sbtnDelete_Click(object sender, EventArgs e)
         {
             if (txtePersonalIdUpdate.Text == "" || txteFirstNameUpdate.Text == "" || txteLastNameUpdate.Text == "" || (Department)lueDepartmentUpdate.GetSelectedDataRow() == null || txteEMailUpdate.Text == "" || txtePhoneNumberUpdate.Text == "" || txteEMailUpdate.Text == "")
@@ -141,6 +170,7 @@ namespace Comp337.WebFormsUI.Forms
             else
             {
                 StudentDelete();
+                UserDelete();
                 LoadStudent();
                 ClearUpdate();
             }
@@ -151,19 +181,19 @@ namespace Comp337.WebFormsUI.Forms
             _StudentService.Delete(new Student
             {
                 Id = ((Student)gvStudent.GetFocusedRow()).Id,
-                DepartmentId = ((Department)lueDepartmentUpdate.GetSelectedDataRow()).Id,
-                Email = txteEMailUpdate.Text,
-                FirstName = txteFirstNameUpdate.Text,
-                LastName = txteLastNameUpdate.Text,
-                PersonalId = txtePersonalIdUpdate.Text,
-                PhoneNumber = txtePhoneNumberUpdate.Text
+                //DepartmentId = ((Department)lueDepartmentUpdate.GetSelectedDataRow()).Id,
+                //Email = txteEMailUpdate.Text,
+                //FirstName = txteFirstNameUpdate.Text,
+                //LastName = txteLastNameUpdate.Text,
+                //PersonalId = txtePersonalIdUpdate.Text,
+                //PhoneNumber = txtePhoneNumberUpdate.Text
             });
-
-            //_userService.Get( );
-
+        }
+        private void UserDelete()
+        {
             _userService.Delete(new User
             {
-                Id = 1
+                Id = _userService.GetByUsername(new User { Username = ((Student)gvStudent.GetFocusedRow()).Email.TrimEnd() }).Id
             });
         }
 

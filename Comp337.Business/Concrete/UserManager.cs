@@ -22,5 +22,15 @@ namespace Comp337.Business.Concrete
         {
             _userDal.Delete(user);
         }
+
+        public User GetByUsername(User user)
+        {
+            return _userDal.Get(p => p.Username == user.Username);
+        }
+
+        public void Update(User user)
+        {
+            _userDal.Update(user);
+        }
     }
 }

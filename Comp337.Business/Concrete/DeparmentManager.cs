@@ -18,5 +18,10 @@ namespace Comp337.Business.Concrete
         {
             return _departmentDal.GetAll();
         }
+
+        public Department GetById(int id)
+        {
+            return _departmentDal.Get(p => p.Id == id);
+        }
     }
 }
