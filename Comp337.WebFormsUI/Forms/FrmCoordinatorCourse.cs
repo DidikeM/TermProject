@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Comp337.Business.Abstract;
 using Comp337.Business.DependencyResolvers.Ninject;
+using Comp337.DataAccess.Concrete.EntityFramework;
 using Comp337.Entities.Concrete;
 using DevExpress.XtraBars.Ribbon.BackstageView.Accessible;
 
@@ -48,7 +49,26 @@ namespace Comp337.WebFormsUI.Forms
 
         private void LoadCourses()
         {
+
+            //using (Comp337Context context = new Comp337Context())
+            //{
+            //    var entity = from c in context.Courses
+            //        join s in context.Semesters on SemesterId equals SemesterId
+            //        select new
+            //        {
+            //            Id = c.Id,
+            //            CourseCode = c.CourseCode,
+            //            CourseName = c.CourseName,
+            //            CourseCredit = c.CourseCredit,
+            //            SemesterId = c.SemesterId
+            //        };
+
+            //    gcCourse.DataSource = entity.ToList();
+            //}
+
+
             gcCourse.DataSource = _courseService.GetAll();
+
             //this.coursesTableAdapter.Fill(this.comp337DataSet.Courses);
             //gvCourse.DataSource = ;
         }
@@ -57,8 +77,8 @@ namespace Comp337.WebFormsUI.Forms
         {
             txteCourseCodeUpdate.Text = ((Course)gvCourse.GetFocusedRow()).CourseCode.TrimEnd();
             txteCourseCreditUpdate.Text = ((Course)gvCourse.GetFocusedRow()).CourseCredit.ToString().TrimEnd();
-            txteCourseNameUpdate.Text = ((Course) gvCourse.GetFocusedRow()).CourseName.TrimEnd();
-            lueSemesterUpdate.EditValue = ((Course) gvCourse.GetFocusedRow()).SemesterId;
+            txteCourseNameUpdate.Text = ((Course)gvCourse.GetFocusedRow()).CourseName.TrimEnd();
+            lueSemesterUpdate.EditValue = ((Course)gvCourse.GetFocusedRow()).SemesterId;
         }
 
 

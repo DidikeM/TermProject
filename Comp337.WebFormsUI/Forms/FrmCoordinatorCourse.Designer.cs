@@ -31,6 +31,11 @@ namespace Comp337.WebFormsUI.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCoordinatorCourse));
             this.gvCourse = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CourseCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CourseName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CourseCredit = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SemesterId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcCourse = new DevExpress.XtraGrid.GridControl();
             this.grpcAdd = new DevExpress.XtraEditors.GroupControl();
             this.sbtnAdd = new DevExpress.XtraEditors.SimpleButton();
@@ -71,11 +76,55 @@ namespace Comp337.WebFormsUI.Forms
             // 
             // gvCourse
             // 
+            this.gvCourse.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.Id,
+            this.CourseCode,
+            this.CourseName,
+            this.CourseCredit,
+            this.SemesterId});
             this.gvCourse.GridControl = this.gcCourse;
             this.gvCourse.Name = "gvCourse";
             this.gvCourse.OptionsBehavior.Editable = false;
             this.gvCourse.OptionsView.ShowGroupPanel = false;
             this.gvCourse.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvCourse_RowClick);
+            // 
+            // Id
+            // 
+            this.Id.Caption = "Id";
+            this.Id.FieldName = "Id";
+            this.Id.Name = "Id";
+            // 
+            // CourseCode
+            // 
+            this.CourseCode.Caption = "Course Code";
+            this.CourseCode.FieldName = "CourseCode";
+            this.CourseCode.Name = "CourseCode";
+            this.CourseCode.Visible = true;
+            this.CourseCode.VisibleIndex = 0;
+            // 
+            // CourseName
+            // 
+            this.CourseName.Caption = "Course Name";
+            this.CourseName.FieldName = "CourseName";
+            this.CourseName.Name = "CourseName";
+            this.CourseName.Visible = true;
+            this.CourseName.VisibleIndex = 1;
+            // 
+            // CourseCredit
+            // 
+            this.CourseCredit.Caption = "Course Credit";
+            this.CourseCredit.FieldName = "CourseCredit";
+            this.CourseCredit.Name = "CourseCredit";
+            this.CourseCredit.Visible = true;
+            this.CourseCredit.VisibleIndex = 2;
+            // 
+            // SemesterId
+            // 
+            this.SemesterId.Caption = "Semester Id";
+            this.SemesterId.FieldName = "SemesterId";
+            this.SemesterId.Name = "SemesterId";
+            this.SemesterId.Visible = true;
+            this.SemesterId.VisibleIndex = 3;
             // 
             // gcCourse
             // 
@@ -344,5 +393,10 @@ namespace Comp337.WebFormsUI.Forms
         private DevExpress.XtraEditors.LabelControl lblcCourseCodeUpdate;
         private DevExpress.XtraEditors.SimpleButton sbtnDelete;
         private DevExpress.XtraGrid.Views.Grid.GridView gvCourse;
+        private DevExpress.XtraGrid.Columns.GridColumn Id;
+        private DevExpress.XtraGrid.Columns.GridColumn CourseCode;
+        private DevExpress.XtraGrid.Columns.GridColumn CourseName;
+        private DevExpress.XtraGrid.Columns.GridColumn CourseCredit;
+        private DevExpress.XtraGrid.Columns.GridColumn SemesterId;
     }
 }

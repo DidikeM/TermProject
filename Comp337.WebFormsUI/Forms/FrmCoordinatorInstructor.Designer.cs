@@ -32,6 +32,14 @@ namespace Comp337.WebFormsUI.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCoordinatorInstructor));
             this.gcInstructor = new DevExpress.XtraGrid.GridControl();
             this.gvInstructor = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grpcAdd = new DevExpress.XtraEditors.GroupControl();
             this.txteEMailAdd = new DevExpress.XtraEditors.TextEdit();
             this.lblcEMailAdd = new DevExpress.XtraEditors.LabelControl();
@@ -99,11 +107,82 @@ namespace Comp337.WebFormsUI.Forms
             // 
             // gvInstructor
             // 
+            this.gvInstructor.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6,
+            this.gridColumn7,
+            this.gridColumn8});
             this.gvInstructor.GridControl = this.gcInstructor;
             this.gvInstructor.Name = "gvInstructor";
             this.gvInstructor.OptionsBehavior.Editable = false;
             this.gvInstructor.OptionsView.ShowGroupPanel = false;
             this.gvInstructor.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvInstructor_RowClick);
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Id";
+            this.gridColumn1.FieldName = "Id";
+            this.gridColumn1.Name = "gridColumn1";
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Personal Id";
+            this.gridColumn2.FieldName = "PersonalId";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 0;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "First Name";
+            this.gridColumn3.FieldName = "FirstName";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 1;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Last Name";
+            this.gridColumn4.FieldName = "LastName";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 2;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Department Id";
+            this.gridColumn5.FieldName = "DepartmentId";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 3;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Phone Number";
+            this.gridColumn6.FieldName = "PhoneNumber";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 4;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Extension Number";
+            this.gridColumn7.FieldName = "ExtensionNumber";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 5;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "E-Mail";
+            this.gridColumn8.FieldName = "Email";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 6;
             // 
             // grpcAdd
             // 
@@ -162,6 +241,7 @@ namespace Comp337.WebFormsUI.Forms
             // 
             this.txtePhoneNumberAdd.Location = new System.Drawing.Point(136, 141);
             this.txtePhoneNumberAdd.Name = "txtePhoneNumberAdd";
+            this.txtePhoneNumberAdd.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.txtePhoneNumberAdd.Size = new System.Drawing.Size(180, 20);
             this.txtePhoneNumberAdd.TabIndex = 16;
             // 
@@ -215,6 +295,8 @@ namespace Comp337.WebFormsUI.Forms
             // 
             this.txtePersonalIdAdd.Location = new System.Drawing.Point(136, 37);
             this.txtePersonalIdAdd.Name = "txtePersonalIdAdd";
+            this.txtePersonalIdAdd.Properties.Mask.EditMask = "00000000000";
+            this.txtePersonalIdAdd.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.txtePersonalIdAdd.Size = new System.Drawing.Size(180, 20);
             this.txtePersonalIdAdd.TabIndex = 9;
             // 
@@ -308,6 +390,7 @@ namespace Comp337.WebFormsUI.Forms
             // 
             this.txtePhoneNumberUpdate.Location = new System.Drawing.Point(136, 141);
             this.txtePhoneNumberUpdate.Name = "txtePhoneNumberUpdate";
+            this.txtePhoneNumberUpdate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.txtePhoneNumberUpdate.Size = new System.Drawing.Size(180, 20);
             this.txtePhoneNumberUpdate.TabIndex = 22;
             // 
@@ -370,6 +453,8 @@ namespace Comp337.WebFormsUI.Forms
             // 
             this.txtePersonalIdUpdate.Location = new System.Drawing.Point(136, 37);
             this.txtePersonalIdUpdate.Name = "txtePersonalIdUpdate";
+            this.txtePersonalIdUpdate.Properties.Mask.EditMask = "00000000000";
+            this.txtePersonalIdUpdate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.txtePersonalIdUpdate.Size = new System.Drawing.Size(180, 20);
             this.txtePersonalIdUpdate.TabIndex = 9;
             // 
@@ -479,5 +564,13 @@ namespace Comp337.WebFormsUI.Forms
         private DevExpress.XtraEditors.LabelControl lblcExtensionNumberUpdate;
         private DevExpress.XtraEditors.TextEdit txtePhoneNumberUpdate;
         private DevExpress.XtraEditors.LabelControl lblcPhoneNumberUpdate;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
     }
 }
