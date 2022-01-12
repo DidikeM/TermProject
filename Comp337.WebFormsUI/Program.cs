@@ -17,7 +17,7 @@ namespace Comp337.WebFormsUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCoordinatorMain());
+            Application.Run(new FrmLoginScreen());
         }
     }
 }

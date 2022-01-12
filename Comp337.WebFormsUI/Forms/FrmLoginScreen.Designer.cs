@@ -52,6 +52,7 @@ namespace Comp337.WebFormsUI.Forms
             this.btnLogin.Size = new System.Drawing.Size(103, 34);
             this.btnLogin.TabIndex = 16;
             this.btnLogin.Text = "Login";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // labelControl2
             // 
@@ -71,6 +72,7 @@ namespace Comp337.WebFormsUI.Forms
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPassword.Properties.Appearance.Options.UseFont = true;
+            this.txtPassword.Properties.UseSystemPasswordChar = true;
             this.txtPassword.Size = new System.Drawing.Size(220, 24);
             this.txtPassword.TabIndex = 14;
             // 
@@ -131,7 +133,7 @@ namespace Comp337.WebFormsUI.Forms
             this.Controls.Add(this.pictureEdit1);
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("FrmLoginScreen.IconOptions.Image")));
             this.Name = "FrmLoginScreen";
-            this.Text = "EUROPEN OF UNIVERSITY LEFKE";
+            this.Text = "EUROPEAN UNIVERSITY OF LEFKE";
             this.Load += new System.EventHandler(this.FrmLoginScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).EndInit();
