@@ -6,5 +6,6 @@ namespace Comp337.Business.Abstract
     public interface ISemesterService
     {
         List<Semester> GetAll();
+        Semester GetById(int id);
     }
 }
