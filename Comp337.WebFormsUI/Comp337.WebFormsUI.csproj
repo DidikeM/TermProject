@@ -135,6 +135,12 @@
     <Compile Include="Forms\InstructorForms\FrmInstructorAddCourseToStudents.Designer.cs">
       <DependentUpon>FrmInstructorAddCourseToStudents.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InstructorForms\FrmInstructorCourseInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InstructorForms\FrmInstructorCourseInformation.Designer.cs">
+      <DependentUpon>FrmInstructorCourseInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\InstructorForms\FrmInstructorMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InstructorForms\FrmInstructorAddCourseToStudents.resx">
       <DependentUpon>FrmInstructorAddCourseToStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InstructorForms\FrmInstructorCourseInformation.resx">
+      <DependentUpon>FrmInstructorCourseInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InstructorForms\FrmInstructorMain.resx">
       <DependentUpon>FrmInstructorMain.cs</DependentUpon>

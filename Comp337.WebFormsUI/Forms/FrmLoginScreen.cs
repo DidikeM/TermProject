@@ -43,7 +43,7 @@ namespace Comp337.WebFormsUI.Forms
             if (_userService.ControlLogin(new User { Username = txtUserName.Text, Password = txtPassword.Text }))
             {
                 _user = _userService.GetByUsername(new User { Username = txtUserName.Text });
-                LoadForms(_user);
+                LoadForms();
             }
             else
             {
@@ -51,19 +51,20 @@ namespace Comp337.WebFormsUI.Forms
             }
         }
 
-        private void LoadForms(User user)
+        private void LoadForms()
         {
-            if (user.UserAuthorizationId == 1)
+            if (_user.UserAuthorizationId == 1)
             {
                 FrmCoordinatorMain frmCoordinatorMain = new FrmCoordinatorMain();
                 this.Hide();
                 frmCoordinatorMain.ShowDialog();
                 this.Show();
             }
-            else if (user.UserAuthorizationId == 2)
+            else if (_user.UserAuthorizationId == 2)
             {
-                FrmInstructorMain frmInstructorMain = new FrmInstructorMain(_instructorService.GetByEMail(user.Username));
+                FrmInstructorMain frmInstructorMain = new FrmInstructorMain(_instructorService.GetByEMail(_user.Username));
                 this.Hide();
+                MessageBox.Show(_instructorService.GetByEMail(_user.Username).Id.ToString());
                 frmInstructorMain.ShowDialog();
                 this.Show();
             }

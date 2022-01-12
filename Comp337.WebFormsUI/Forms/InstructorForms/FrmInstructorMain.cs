@@ -1,14 +1,6 @@
 ﻿using Comp337.Entities.Concrete;
 using DevExpress.XtraBars;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using Comp337.WebFormsUI.Forms.InstructorForms;
 
 namespace Comp337.WebFormsUI.Forms.InstructorsForms
 {
@@ -23,6 +15,7 @@ namespace Comp337.WebFormsUI.Forms.InstructorsForms
         Instructor _instructor;
 
         private FrmInstructorAddCourseToStudents frmInstructorCourseInfoAndAddStudent;
+        private FrmInstructorCourseInformation frmInstructorCourseInformation;
 
         private void btnAddStudents_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -31,6 +24,16 @@ namespace Comp337.WebFormsUI.Forms.InstructorsForms
                 frmInstructorCourseInfoAndAddStudent = new FrmInstructorAddCourseToStudents(_instructor);
                 frmInstructorCourseInfoAndAddStudent.MdiParent = this;
                 frmInstructorCourseInfoAndAddStudent.Show();
+            }
+        }
+
+        private void btnCourseInformation_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (frmInstructorCourseInformation == null)
+            {
+                frmInstructorCourseInformation = new FrmInstructorCourseInformation(_instructor);
+                frmInstructorCourseInformation.MdiParent = this;
+                frmInstructorCourseInformation.Show();
             }
         }
     }

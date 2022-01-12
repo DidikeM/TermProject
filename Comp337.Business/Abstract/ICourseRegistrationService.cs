@@ -9,5 +9,6 @@ namespace Comp337.Business.Abstract
         bool ControlByStudentIdandCourseId(CourseRegistration courseRegistration);
         void DeleteByStudentIdandCourseId(CourseRegistration courseRegistration);
         void Add(CourseRegistration courseRegistration);
+        List<CourseRegistration> GetByCourseId(int id);
     }
 }

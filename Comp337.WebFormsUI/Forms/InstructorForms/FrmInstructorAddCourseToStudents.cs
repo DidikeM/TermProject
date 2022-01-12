@@ -1,12 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Comp337.Business.Abstract;
 using Comp337.Business.DependencyResolvers.Ninject;
@@ -26,7 +20,6 @@ namespace Comp337.WebFormsUI.Forms.InstructorsForms
             _semesterService = InstanceFactory.GetInstance<ISemesterService>();
             //_customer = customer;
             _instructor = instructor;
-            _instructor = new Instructor {Id = 1};
             _students = new List<Student>();
             _courses = new List<Course>();
         }

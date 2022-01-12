@@ -19,6 +19,11 @@ namespace Comp337.Business.Concrete
             return _courseRegistrationDal.GetAll(p => p.StudentId == id);
         }
 
+        public List<CourseRegistration> GetByCourseId(int id)
+        {
+            return _courseRegistrationDal.GetAll(p => p.CourseId == id);
+        }
+
         public bool ControlByStudentIdandCourseId(CourseRegistration courseRegistration)
         {
             //Todo Eğer gönderilen değer varsa true yoksa false dödürür

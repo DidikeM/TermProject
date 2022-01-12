@@ -17,9 +17,14 @@ namespace Comp337.Business.Concrete
         }
 
 
-        public List<CourseInstructor> GetByCourseId(int courseId)
+        public List<CourseInstructor> GetByCourseId(int id)
         {
-            return _courseInstructorDal.GetAll(p => p.CourseId == courseId);
+            return _courseInstructorDal.GetAll(p => p.CourseId == id);
+        }
+
+        public List<CourseInstructor> GetByInstructorId(int id)
+        {
+            return _courseInstructorDal.GetAll(p => p.InstructorId == id);
         }
 
         public void Add(CourseInstructor courseInstructor)

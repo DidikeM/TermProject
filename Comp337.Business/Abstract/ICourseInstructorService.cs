@@ -9,5 +9,6 @@ namespace Comp337.Business.Abstract
         void Add(CourseInstructor courseInstructor);
         bool ControlByCourseIdandInstructorId(CourseInstructor courseInstructor);
         void DeleteByCourseIdandInstructorId(CourseInstructor courseInstructor);
+        List<CourseInstructor> GetByInstructorId(int id);   
     }
 }

@@ -47,21 +47,8 @@ namespace Comp337.WebFormsUI.Forms.CoordinatorForms
             this.lblcPersonalId = new DevExpress.XtraEditors.LabelControl();
             this.gcCourse = new DevExpress.XtraGrid.GridControl();
             this.gvCourse = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CourseCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CourseName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CourseCredit = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SemesterId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcInstructorOfCourse = new DevExpress.XtraGrid.GridControl();
             this.gvInstructorOfCourse = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gcInstructor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvInstructor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpcAdd)).BeginInit();
@@ -229,54 +216,11 @@ namespace Comp337.WebFormsUI.Forms.CoordinatorForms
             // 
             // gvCourse
             // 
-            this.gvCourse.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.Id,
-            this.CourseCode,
-            this.CourseName,
-            this.CourseCredit,
-            this.SemesterId});
             this.gvCourse.GridControl = this.gcCourse;
             this.gvCourse.Name = "gvCourse";
             this.gvCourse.OptionsBehavior.Editable = false;
             this.gvCourse.OptionsView.ShowGroupPanel = false;
-            // 
-            // Id
-            // 
-            this.Id.Caption = "Id";
-            this.Id.FieldName = "Id";
-            this.Id.Name = "Id";
-            // 
-            // CourseCode
-            // 
-            this.CourseCode.Caption = "Course Code";
-            this.CourseCode.FieldName = "CourseCode";
-            this.CourseCode.Name = "CourseCode";
-            this.CourseCode.Visible = true;
-            this.CourseCode.VisibleIndex = 0;
-            // 
-            // CourseName
-            // 
-            this.CourseName.Caption = "Course Name";
-            this.CourseName.FieldName = "CourseName";
-            this.CourseName.Name = "CourseName";
-            this.CourseName.Visible = true;
-            this.CourseName.VisibleIndex = 1;
-            // 
-            // CourseCredit
-            // 
-            this.CourseCredit.Caption = "Course Credit";
-            this.CourseCredit.FieldName = "CourseCredit";
-            this.CourseCredit.Name = "CourseCredit";
-            this.CourseCredit.Visible = true;
-            this.CourseCredit.VisibleIndex = 2;
-            // 
-            // SemesterId
-            // 
-            this.SemesterId.Caption = "Semester Id";
-            this.SemesterId.FieldName = "SemesterId";
-            this.SemesterId.Name = "SemesterId";
-            this.SemesterId.Visible = true;
-            this.SemesterId.VisibleIndex = 3;
+            this.gvCourse.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvCourse_RowClick);
             // 
             // gcInstructorOfCourse
             // 
@@ -290,81 +234,11 @@ namespace Comp337.WebFormsUI.Forms.CoordinatorForms
             // 
             // gvInstructorOfCourse
             // 
-            this.gvInstructorOfCourse.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5,
-            this.gridColumn6,
-            this.gridColumn7,
-            this.gridColumn8});
             this.gvInstructorOfCourse.GridControl = this.gcInstructorOfCourse;
             this.gvInstructorOfCourse.Name = "gvInstructorOfCourse";
             this.gvInstructorOfCourse.OptionsBehavior.Editable = false;
             this.gvInstructorOfCourse.OptionsView.ShowGroupPanel = false;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Id";
-            this.gridColumn1.FieldName = "Id";
-            this.gridColumn1.Name = "gridColumn1";
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Personal Id";
-            this.gridColumn2.FieldName = "PersonalId";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 0;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "First Name";
-            this.gridColumn3.FieldName = "FirstName";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 1;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "Last Name";
-            this.gridColumn4.FieldName = "LastName";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 2;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "Department Id";
-            this.gridColumn5.FieldName = "DepartmentId";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 3;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "Phone Number";
-            this.gridColumn6.FieldName = "PhoneNumber";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 4;
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.Caption = "Extension Number";
-            this.gridColumn7.FieldName = "ExtensionNumber";
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 5;
-            // 
-            // gridColumn8
-            // 
-            this.gridColumn8.Caption = "E-Mail";
-            this.gridColumn8.FieldName = "Email";
-            this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 6;
+            this.gvInstructorOfCourse.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvInstructorOfCourse_RowClick);
             // 
             // FrmCoordinatorAssignmentOfInstructorToCourse
             // 
@@ -414,20 +288,7 @@ namespace Comp337.WebFormsUI.Forms.CoordinatorForms
         private DevExpress.XtraEditors.SimpleButton sbtnDelete;
         private DevExpress.XtraGrid.GridControl gcCourse;
         private DevExpress.XtraGrid.Views.Grid.GridView gvCourse;
-        private DevExpress.XtraGrid.Columns.GridColumn Id;
-        private DevExpress.XtraGrid.Columns.GridColumn CourseCode;
-        private DevExpress.XtraGrid.Columns.GridColumn CourseName;
-        private DevExpress.XtraGrid.Columns.GridColumn CourseCredit;
-        private DevExpress.XtraGrid.Columns.GridColumn SemesterId;
         private DevExpress.XtraGrid.GridControl gcInstructorOfCourse;
         private DevExpress.XtraGrid.Views.Grid.GridView gvInstructorOfCourse;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
     }
 }
