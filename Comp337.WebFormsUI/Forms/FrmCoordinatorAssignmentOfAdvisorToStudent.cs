@@ -114,9 +114,13 @@ namespace Comp337.WebFormsUI.Forms
             {
                 MessageBox.Show("Önce eçiniz");
             }
-            else if (_advisorService.ControlByStudentIdandInstructorId(new Advisor() { InstructorId = ((Instructor)gvAdvisor.GetFocusedRow()).Id, StudentId = ((Student)gvStudent.GetFocusedRow()).Id }))
+            else if (_advisorService.ControlByStudentIdandInstructorId(new Advisor { InstructorId = ((Instructor)gvAdvisor.GetFocusedRow()).Id, StudentId = ((Student)gvStudent.GetFocusedRow()).Id }))
             {
                 MessageBox.Show("Bu öğrencinin danışmanı zaten bu hocadır");
+            }
+            else if (_advisorService.ControlByStudentId(new Advisor { StudentId = ((Student)gvStudent.GetFocusedRow()).Id }))
+            {
+                MessageBox.Show("Bu öğrencinin danışmanı vardır");
             }
             else
             {
