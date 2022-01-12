@@ -17,5 +17,14 @@ namespace Comp337.WebFormsUI.Forms.StudentsForms
         {
             InitializeComponent();
         }
+
+        private FrmStudentRegisteredStudents frmStudentRegisteredStudents;
+        private FrmRStudentsegisteredCourses frmRStudentsegisteredCourses;
+
+
+        private void FrmStudentsForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

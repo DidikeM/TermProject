@@ -29,6 +29,7 @@ namespace Comp337.WebFormsUI.Forms.StudentsForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnHomePage = new DevExpress.XtraBars.BarButtonItem();
             this.btnRegisteredCourses = new DevExpress.XtraBars.BarButtonItem();
@@ -37,7 +38,9 @@ namespace Comp337.WebFormsUI.Forms.StudentsForms
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -111,6 +114,10 @@ namespace Comp337.WebFormsUI.Forms.StudentsForms
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(904, 24);
             // 
+            // xtraTabbedMdiManager1
+            // 
+            this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
             // FrmStudentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,11 +125,14 @@ namespace Comp337.WebFormsUI.Forms.StudentsForms
             this.ClientSize = new System.Drawing.Size(904, 453);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.IsMdiContainer = true;
             this.Name = "FrmStudentsForm";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "FrmStudentsForm";
+            this.Load += new System.EventHandler(this.FrmStudentsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,5 +148,6 @@ namespace Comp337.WebFormsUI.Forms.StudentsForms
         private DevExpress.XtraBars.BarButtonItem btnRegisteredCourses;
         private DevExpress.XtraBars.BarButtonItem btnRegisteredStudents;
         private DevExpress.XtraBars.BarButtonItem btnUserInformation;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
     }
 }

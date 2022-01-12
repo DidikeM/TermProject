@@ -58,14 +58,19 @@ namespace Comp337.WebFormsUI.Forms
             if (user.UserAuthorizationId == 1)
             {
                 OpenForm(new FrmCoordinatorMain());
+                this.Hide();
             }
             else if (user.UserAuthorizationId == 2)
             {
                 OpenForm(new FrmInstructorMain());
+                this.Hide();
+
             }
             else if (_user.UserAuthorizationId == 3)
             {
                 OpenForm(new FrmStudentsForm());
+                this.Hide();
+                
             }
             else
             {

@@ -141,6 +141,18 @@
     <Compile Include="Forms\InstructorsForms\FrmInstructorMain.Designer.cs">
       <DependentUpon>FrmInstructorMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\StudentsForms\FrmRStudentsegisteredCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentsForms\FrmRStudentsegisteredCourses.Designer.cs">
+      <DependentUpon>FrmRStudentsegisteredCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StudentsForms\FrmStudentRegisteredStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentsForms\FrmStudentRegisteredStudents.Designer.cs">
+      <DependentUpon>FrmStudentRegisteredStudents.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\StudentsForms\FrmStudentsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +196,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InstructorsForms\FrmInstructorMain.resx">
       <DependentUpon>FrmInstructorMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StudentsForms\FrmRStudentsegisteredCourses.resx">
+      <DependentUpon>FrmRStudentsegisteredCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StudentsForms\FrmStudentRegisteredStudents.resx">
+      <DependentUpon>FrmStudentRegisteredStudents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StudentsForms\FrmStudentsForm.resx">
       <DependentUpon>FrmStudentsForm.cs</DependentUpon>
