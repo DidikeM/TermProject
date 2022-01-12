@@ -34,5 +34,10 @@ namespace Comp337.Business.Concrete
         {
             _courseDal.Delete(course);
         }
+
+        public Course GetById(int id)
+        {
+            return _courseDal.Get(p => p.Id == id);
+        }
     }
 }

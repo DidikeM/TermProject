@@ -9,5 +9,6 @@ namespace Comp337.Business.Abstract
         List<Course> GetAll();
         void update(Course course);
         void Delete(Course course);
+        Course GetById(int id);
     }
 }

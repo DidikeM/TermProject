@@ -18,5 +18,10 @@ namespace Comp337.Business.Concrete
         {
             return _semesterDal.GetAll();
         }
+
+        public Semester GetById(int id)
+        {
+            return _semesterDal.Get(p => p.Id == id);
+        }
     }
 }
