@@ -8,5 +8,6 @@ namespace Comp337.Business.Abstract
         void Delete(User user);
         User GetByUsername(User user);
         void Update(User user);
+        bool ControlLogin(User user);
     }
 }

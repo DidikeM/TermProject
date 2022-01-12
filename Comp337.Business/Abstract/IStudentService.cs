@@ -9,5 +9,6 @@ namespace Comp337.Business.Abstract
         void Add(Student student);
         void Update(Student student);
         void Delete(Student student);
+        Student GetById(int id);
     }
 }

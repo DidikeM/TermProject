@@ -32,5 +32,18 @@ namespace Comp337.Business.Concrete
         {
             _userDal.Update(user);
         }
+
+        public bool ControlLogin(User user)
+        {
+
+            if (_userDal.Get(p => p.Username == user.Username && p.Password == user.Password) != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

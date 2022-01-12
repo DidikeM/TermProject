@@ -9,14 +9,10 @@ namespace Comp337.Business.Concrete
     {
         private IStudentDal _studentDal;
 
-        
-
         public StudentManager(IStudentDal studentDal)
         {
             _studentDal = studentDal;
         }
-
-        
 
         public List<Student> GetAll()
         {
@@ -36,6 +32,11 @@ namespace Comp337.Business.Concrete
         public void Delete(Student student)
         {
             _studentDal.Delete(student);
+        }
+
+        public Student GetById(int id)
+        {
+            return _studentDal.Get(p => p.Id == id);
         }
     }
 }

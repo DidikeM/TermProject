@@ -55,6 +55,15 @@ namespace Comp337.WebFormsUI.Forms
             //gvCourse.DataSource = ;
         }
 
+        private void ClearTxtes()
+        {
+            txtePersonalId.Text = "";
+            txteFirstName.Text = "";
+            txteLastName.Text = "";
+            txteDepartment.Text = "";
+            txteEMail.Text = "";
+        }
+
         private void gvCourse_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             LoadInstructorOfCourse(((Course) gvCourse.GetFocusedRow()).Id);
@@ -82,16 +91,6 @@ namespace Comp337.WebFormsUI.Forms
 
             ////Burda kaldım data source güncellenmiyo
             ////Email kısmında hata ver data updatelenmiyo
-        }
-
-
-        private void ClearTxtes()
-        {
-            txtePersonalId.Text = "";
-            txteFirstName.Text = "";
-            txteLastName.Text = "";
-            txteDepartment.Text = "";
-            txteEMail.Text = "";
         }
 
         private void gvInstructor_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)

@@ -92,6 +92,7 @@ namespace Comp337.WebFormsUI.Forms
             this.sbtnDelete.Size = new System.Drawing.Size(87, 35);
             this.sbtnDelete.TabIndex = 22;
             this.sbtnDelete.Text = "Delete";
+            this.sbtnDelete.Click += new System.EventHandler(this.sbtnDelete_Click);
             // 
             // txteDepartment
             // 
@@ -126,6 +127,7 @@ namespace Comp337.WebFormsUI.Forms
             this.sbtnAdd.Size = new System.Drawing.Size(87, 35);
             this.sbtnAdd.TabIndex = 14;
             this.sbtnAdd.Text = "Add";
+            this.sbtnAdd.Click += new System.EventHandler(this.sbtnAdd_Click);
             // 
             // txteLastName
             // 
@@ -200,6 +202,7 @@ namespace Comp337.WebFormsUI.Forms
             this.gvStudent.Name = "gvStudent";
             this.gvStudent.OptionsBehavior.Editable = false;
             this.gvStudent.OptionsView.ShowGroupPanel = false;
+            this.gvStudent.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvStudent_RowClick);
             // 
             // gcStudentOfAdvisor
             // 
@@ -217,6 +220,7 @@ namespace Comp337.WebFormsUI.Forms
             this.gvStudentOfAdvisor.Name = "gvStudentOfAdvisor";
             this.gvStudentOfAdvisor.OptionsBehavior.Editable = false;
             this.gvStudentOfAdvisor.OptionsView.ShowGroupPanel = false;
+            this.gvStudentOfAdvisor.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvStudentOfAdvisor_RowClick);
             // 
             // gcAdvisor
             // 
@@ -234,6 +238,7 @@ namespace Comp337.WebFormsUI.Forms
             this.gvAdvisor.Name = "gvAdvisor";
             this.gvAdvisor.OptionsBehavior.Editable = false;
             this.gvAdvisor.OptionsView.ShowGroupPanel = false;
+            this.gvAdvisor.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvAdvisor_RowClick);
             // 
             // FrmCoordinatorAssignmentOfAdvisorToStudent
             // 
@@ -246,6 +251,7 @@ namespace Comp337.WebFormsUI.Forms
             this.Controls.Add(this.gcAdvisor);
             this.Name = "FrmCoordinatorAssignmentOfAdvisorToStudent";
             this.Text = "FrmcoordinatorAssignmentOfAdvisorToStudent";
+            this.Load += new System.EventHandler(this.FrmCoordinatorAssignmentOfAdvisorToStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grpcAdd)).EndInit();
             this.grpcAdd.ResumeLayout(false);
             this.grpcAdd.PerformLayout();
