@@ -35,5 +35,11 @@ namespace Comp337.Business.Concrete
         {
             _instructorDal.Delete(instructor);
         }
+
+        public Instructor GetById(int id)
+        {
+            return _instructorDal.Get(p => p.Id == id);
+        }
+
     }
 }
