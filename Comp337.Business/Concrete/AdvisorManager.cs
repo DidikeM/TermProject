@@ -36,5 +36,18 @@ namespace Comp337.Business.Concrete
         {
             _advisorDal.Add(advisor);
         }
+
+        public void DeleteByStudentIdandInstructorId(Advisor advisor)
+        {
+            var a = _advisorDal.Get(p => p.StudentId == advisor.StudentId && p.InstructorId == advisor.InstructorId);
+            if (a != null)
+            {
+                _advisorDal.Delete(a);
+            }
+            else
+            {
+
+            }
+        }
     }
 }

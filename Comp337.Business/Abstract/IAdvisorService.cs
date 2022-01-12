@@ -8,5 +8,6 @@ namespace Comp337.Business.Abstract
         List<Advisor> GetByInstructoreId(int instructoId);
         bool ControlByStudentIdandInstructorId(Advisor advisor);
         void Add(Advisor advisor);
+        void DeleteByStudentIdandInstructorId(Advisor advisor);
     }
 }
