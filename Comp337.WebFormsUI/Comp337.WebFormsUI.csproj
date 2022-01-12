@@ -129,6 +129,12 @@
     <Compile Include="Forms\FrmLoginScreen.Designer.cs">
       <DependentUpon>FrmLoginScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InstructorsForms\FrmInstructorCourseInfoAndAddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InstructorsForms\FrmInstructorCourseInfoAndAddStudent.Designer.cs">
+      <DependentUpon>FrmInstructorCourseInfoAndAddStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\InstructorsForms\FrmInstructorMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLoginScreen.resx">
       <DependentUpon>FrmLoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InstructorsForms\FrmInstructorCourseInfoAndAddStudent.resx">
+      <DependentUpon>FrmInstructorCourseInfoAndAddStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InstructorsForms\FrmInstructorMain.resx">
       <DependentUpon>FrmInstructorMain.cs</DependentUpon>
